@@ -1,0 +1,173 @@
+// import the CSS framework
+@import "bootstrap";
+
+body {
+  background: #242424;
+  color: #222;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+  }
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit;
+  }
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.form {
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  background-color: #242424;
+  padding-bottom: 40px;
+  width: 100%;
+  margin-top: 0; // accommodate the navbar
+  }
+section {
+  @extend .row;
+  margin-top: 0;
+  }
+  
+.navbar-brand {
+  float: left;
+  height: 60px;
+  padding: 0;
+  position: relative;
+  width: 201px;
+}
+
+
+.navbar-brand img {
+  position: absolute;
+  top: 10px;
+}
+
+.navbar {
+  border: 1px solid rgba(0, 0, 0, 0);
+  margin-bottom: 0;
+  min-height: 60px;
+  position: relative;
+}
+
+.navbar-nav > li > a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  padding-bottom: 5px;
+  padding-top: 34px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  color: #9A9C9C;
+  float: left;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 38px;
+  text-transform: uppercase;
+}
+
+.home-header {
+  background-color: #BBBBBB;
+  background-image: image-url("home-section.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  height: 613px;
+  position: relative;
+  text-align: left;
+}
+
+.home-features {
+  background-color: #fff;
+  color: #2a2a2a;
+  min-height: 300px;
+  margin-bottom: 30px;
+  padding: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.home-features h2 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.home-features .callout h2 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.home-features .callout h3 {
+  font-size: 25px;
+  font-weight: 300;
+  margin: 0 auto;
+  max-width: 850px;
+}
+
+.home-features .callout {
+  margin-bottom: 30px;
+}
+
+.home-features p {
+  font-size: 16px;
+}
+
+.signup-form {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  min-height: 300px;
+  margin-top: 40px;
+  padding: 20px 25px;
+}
+
+.signup-form .form-content {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.signup-form h2 {
+  font-size: 36px;
+  margin: 0 0 4px;
+  color: #fff;
+}
+
+.signup-form h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #f2c302;
+}
+
+footer {
+  color: #9A9C9C;
+  font-size: 11px;
+  text-align: center;
+}

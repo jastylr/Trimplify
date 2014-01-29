@@ -1,0 +1,8 @@
+<%= simple_form_for %>
+<div class = "medium-12 columns">
+    <%= form.input :date_of_birth, as: :date, 
+                   end_year: Date.today.year - 2, 
+                   start_year: Date.today.year - 90, 
+                   order: [:day, :month, :year],
+                   input_html: {class: "medium-12 columns"}%>
+</div>

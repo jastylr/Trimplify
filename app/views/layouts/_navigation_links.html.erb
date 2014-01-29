@@ -1,6 +1,10 @@
 <%# add navigation links to this file %>
-<li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">How Does it Work?</a></li>
-<li><a href="works.html">Contact</a></li>
+<li>
+	<%= link_to root_path do %>
+    <%= content_tag(:span, "" ,:class=>' glyphicon glyphicon-home') %> Home
+	<% end %>
+</li>
+<li><%= link_to("About", '/about') %></li>
+<li><%= link_to("How Does it Work?", '/how') %></li>
+<li><%= link_to("Contact", '/contact') %></li>
 <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>

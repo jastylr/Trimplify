@@ -7,4 +7,9 @@
 <li><%= link_to("About", '/about') %></li>
 <li><%= link_to("How Does it Work?", '/how') %></li>
 <li><%= link_to("Contact", '/contact') %></li>
+<li>
+  <%= link_to root_path, :class => 'login' do %>
+    <%= content_tag(:span, "" ,:class=>' glyphicon glyphicon-user') %> Log in
+  <% end %>
+</li>
 <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>

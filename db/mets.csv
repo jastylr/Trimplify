@@ -1,0 +1,323 @@
+1,"bicycling, mountain, uphill, vigorous",14,2014-01-30,2014-01-30
+2,"bicycling, mountain, competitive, racing",16,2014-01-30,2014-01-30
+3,"bicycling, BMX",8.5,2014-01-30,2014-01-30
+4,"bicycling, mountain, general",8.5,2014-01-30,2014-01-30
+5,"bicycling, <10 mph, leisure, to work or for pleasure (Taylor Code 115)",4,2014-01-30,2014-01-30
+6,"bicycling, to/from work, self selected pace",6.8,2014-01-30,2014-01-30
+7,"bicycling, on dirt or farm road, moderate pace",5.8,2014-01-30,2014-01-30
+8,"bicycling, general",7.5,2014-01-30,2014-01-30
+9,"bicycling, leisure, 5.5 mph",3.5,2014-01-30,2014-01-30
+10,"bicycling, leisure, 9.4 mph",5.8,2014-01-30,2014-01-30
+11,"bicycling, 10-11.9 mph, leisure, slow, light effort",6.8,2014-01-30,2014-01-30
+12,"bicycling, 12-13.9 mph, leisure, moderate effort",8,2014-01-30,2014-01-30
+13,"bicycling, 14-15.9 mph, racing or leisure, fast, vigorous effort",10,2014-01-30,2014-01-30
+14,"bicycling, 16-19 mph, racing/not drafting or > 19 mph drafting, very fast, racing general",12,2014-01-30,2014-01-30
+15,"bicycling, > 20 mph, racing, not drafting",15.8,2014-01-30,2014-01-30
+16,"bicycling, 12 mph, seated, hands on brake hoods or bar drops, 80 rpm",8.5,2014-01-30,2014-01-30
+17,"bicycling, 12 mph, standing, hands on brake hoods, 60 rpm",9,2014-01-30,2014-01-30
+18,"bicycling, stationary, general",7,2014-01-30,2014-01-30
+19,"bicycling, stationary, 30-50 watts, very light to light effort",3.5,2014-01-30,2014-01-30
+20,"bicycling, stationary, 90-100 watts, moderate to vigorous effort",6.8,2014-01-30,2014-01-30
+21,"bicycling, stationary, 101-160 watts, vigorous effort",8.8,2014-01-30,2014-01-30
+22,"bicycling, stationary, 161-200 watts, vigorous effort",11,2014-01-30,2014-01-30
+23,"bicycling, stationary, 201-270 watts, very vigorous effort",14,2014-01-30,2014-01-30
+24,"bicycling, stationary, 51-89 watts, light-to-moderate effort¾",4.8,2014-01-30,2014-01-30
+25,"bicycling, stationary, RPM/Spin bike class¾",8.5,2014-01-30,2014-01-30
+26,"calisthenics (e.g., push ups, sit ups, pull-ups, jumping jacks), vigorous effort",8,2014-01-30,2014-01-30
+27,"calisthenics (e.g., push ups, sit ups, pull-ups, lunges), moderate effort",3.8,2014-01-30,2014-01-30
+28,"calisthenics (e.g., situps, abdominal crunches), light effort",2.8,2014-01-30,2014-01-30
+29,"calisthenics, light or moderate effort, general (e.g., back exercises), going up & down from floor (Taylor Code 150)",3.5,2014-01-30,2014-01-30
+30,"circuit training, moderate effort",4.3,2014-01-30,2014-01-30
+31,"circuit training, including kettlebells, some aerobic movement with minimal rest, general, vigorous intensity",8,2014-01-30,2014-01-30
+32,"Elliptical trainer, moderate effort¾",5,2014-01-30,2014-01-30
+33,"resistance training (weight lifting, free weight, nautilus or universal), power lifting or body building, vigorous effort (Taylor Code 210)",6,2014-01-30,2014-01-30
+34,"resistance (weight) training, squats , slow or explosive effort",5,2014-01-30,2014-01-30
+35,"resistance (weight) training, multiple exercises, 8-15 repetitions at varied resistance¾",3.5,2014-01-30,2014-01-30
+36,"health club exercise, general (Taylor Code 160)",5.5,2014-01-30,2014-01-30
+37,"health club exercise classes, general, gym/weight training combined in one visit",5,2014-01-30,2014-01-30
+38,"health club exercise, conditioning classes",7.8,2014-01-30,2014-01-30
+39,"home exercise, general¾",3.8,2014-01-30,2014-01-30
+40,"stair-treadmill ergometer, general",9,2014-01-30,2014-01-30
+41,"rope skipping, general",12.3,2014-01-30,2014-01-30
+42,"rowing, stationary ergometer, general, vigorous effort",6,2014-01-30,2014-01-30
+43,"rowing, stationary, general, moderate effort",4.8,2014-01-30,2014-01-30
+44,"rowing, stationary, 100 watts, moderate effort",7,2014-01-30,2014-01-30
+45,"rowing, stationary, 150 watts, vigorous effort",8.5,2014-01-30,2014-01-30
+46,"rowing, stationary, 200 watts, very vigorous effort",12,2014-01-30,2014-01-30
+47,"ski machine, general",6.8,2014-01-30,2014-01-30
+48,"slide board exercise, general¾",11,2014-01-30,2014-01-30
+49,"slimnastics, jazzercise",6,2014-01-30,2014-01-30
+50,"stretching, mild",2.3,2014-01-30,2014-01-30
+51,"pilates, general¾",3,2014-01-30,2014-01-30
+52,"teaching exercise class (e.g., aerobic, water)",6.8,2014-01-30,2014-01-30
+53,"therapeutic exercise ball, Fitball exercise¾",2.8,2014-01-30,2014-01-30
+54,"upper body exercise, arm ergometer¾",2.8,2014-01-30,2014-01-30
+55,"upper body exercise, stationary bicycle - Airdyne (arms only) 40 rpm, moderate¾",4.3,2014-01-30,2014-01-30
+56,"water aerobics, water calisthenics, water exercise",5.3,2014-01-30,2014-01-30
+57,"video exercise workouts, TV conditioning programs (e.g., yoga, stretching), light effort",2.3,2014-01-30,2014-01-30
+58,"video exercise workouts, TV conditioning programs (e.g., cardio-resistance), moderate effort",4,2014-01-30,2014-01-30
+59,"video exercise workouts, TV conditioning programs (e.g., cardio-resistance), vigorous effort",6,2014-01-30,2014-01-30
+60,"yoga, Hatha¾",2.5,2014-01-30,2014-01-30
+61,"yoga, Power¾",4,2014-01-30,2014-01-30
+62,"yoga, Nadisodhana¾",2,2014-01-30,2014-01-30
+63,"yoga, Surya Namaskar",3.3,2014-01-30,2014-01-30
+64,"ballet, modern, or jazz, general, rehearsal or class",5,2014-01-30,2014-01-30
+65,"ballet, modern, or jazz, performance, vigorous effort¾",6.8,2014-01-30,2014-01-30
+66,"aerobic, general",7.3,2014-01-30,2014-01-30
+67,"aerobic, step, with 6 - 8 inch step",7.5,2014-01-30,2014-01-30
+68,"aerobic, step, with 10 - 12 inch step",9.5,2014-01-30,2014-01-30
+69,"aerobic, step, with 4-inch step¾",5.5,2014-01-30,2014-01-30
+70,"bench step class, general¾",8.5,2014-01-30,2014-01-30
+71,"aerobic, low impact",5,2014-01-30,2014-01-30
+72,"aerobic, high impact",7.3,2014-01-30,2014-01-30
+73,aerobic dance wearing 10-15 lb weights¾,10,2014-01-30,2014-01-30
+74,"ethnic or cultural dancing (e.g., Greek, Middle Eastern, hula, salsa, merengue, bamba y plena, flamenco, belly, and swing)",4.5,2014-01-30,2014-01-30
+75,"ballroom, fast (Taylor Code 125)",5.5,2014-01-30,2014-01-30
+76,"general dancing (e.g., disco, folk, Irish step dancing, line dancing, polka, contra, country)",7.8,2014-01-30,2014-01-30
+77,"ballroom dancing, competitive, general¾",11.3,2014-01-30,2014-01-30
+78,"ballroom, slow (e.g., waltz, foxtrot, slow dancing, samba, tango, 19th¾century dance, mambo, cha cha)",3,2014-01-30,2014-01-30
+79,"walking/running, playing with child(ren), moderate effort, only active periods",3.5,2014-01-30,2014-01-30
+80,"walking/running, playing with child(ren), vigorous effort, only active periods",5.8,2014-01-30,2014-01-30
+81,"walking and carrying small child, child weighing 15 lbs or more",3,2014-01-30,2014-01-30
+82,"walking and¾carrying small child, child weighing less than 15 lbs",2.3,2014-01-30,2014-01-30
+83,"walking on job, less than 2.0 mph, very slow speed, in office or lab area",2,2014-01-30,2014-01-30
+84,"walking on job, 3.0 mph, in office, moderate speed, not carrying anything",3.5,2014-01-30,2014-01-30
+85,"walking on job, 3.5 mph, in office, brisk speed, not carrying anything",4.3,2014-01-30,2014-01-30
+86,"walking on job, 2.5 mph, slow speed and carrying light objects less than 25 lbs",3.5,2014-01-30,2014-01-30
+87,"walking, gathering things at work, ready to leave",3,2014-01-30,2014-01-30
+88,"walking, 2.5 mph, slow speed, carrying heavy objects more than 25 lbs",3.8,2014-01-30,2014-01-30
+89,"walking, 3.0 mph, moderately and carrying light objects less than 25 lbs",4.5,2014-01-30,2014-01-30
+90,"walking, pushing a wheelchair",3.5,2014-01-30,2014-01-30
+91,"walking, 3.5 mph, briskly and carrying objects less than 25 lbs",4.8,2014-01-30,2014-01-30
+92,"walking or walk downstairs or standing, carrying objects about 25 to 49 lbs",5,2014-01-30,2014-01-30
+93,"walking or walk downstairs or standing, carrying objects about 50 to 74 lbs",6.5,2014-01-30,2014-01-30
+94,"walking or walk downstairs or standing, carrying objects about 75 to 99 lbs",7.5,2014-01-30,2014-01-30
+95,"walking or walk downstairs or standing, carrying objects about 100 lbs or more",8.5,2014-01-30,2014-01-30
+96,"working in scene shop, theater actor, backstage employee",3,2014-01-30,2014-01-30
+97,jog/walk combination (jogging component of less than 10 minutes) (Taylor Code 180),6,2014-01-30,2014-01-30
+98,"jogging, general",7,2014-01-30,2014-01-30
+99,"jogging, in place",8,2014-01-30,2014-01-30
+100,"jogging, on a mini-tramp",4.5,2014-01-30,2014-01-30
+101,"Running, 4 mph (13 min/mile)¾",6,2014-01-30,2014-01-30
+102,"running, 5 mph (12 min/mile)",8.3,2014-01-30,2014-01-30
+103,"running, 5.2 mph (11.5 min/mile)",9,2014-01-30,2014-01-30
+104,"running, 6 mph (10 min/mile)",9.8,2014-01-30,2014-01-30
+105,"running, 6.7 mph (9 min/mile)",10.5,2014-01-30,2014-01-30
+106,"running, 7 mph (8.5 min/mile)",11,2014-01-30,2014-01-30
+107,"running, 7.5 mph (8 min/mile)",11.5,2014-01-30,2014-01-30
+108,"running, 8 mph (7.5 min/mile)",11.8,2014-01-30,2014-01-30
+109,"running, 8.6 mph (7 min/mile)",12.3,2014-01-30,2014-01-30
+110,"running, 9 mph (6.5 min/mile)",12.8,2014-01-30,2014-01-30
+111,"running, 10 mph (6 min/mile)",14.5,2014-01-30,2014-01-30
+112,"running, 11 mph (5.5 min/mile)",16,2014-01-30,2014-01-30
+113,"running, 12 mph (5 min/mile)¾",19,2014-01-30,2014-01-30
+114,"running, 13 mph (4.6 min/mile)",19.8,2014-01-30,2014-01-30
+115,"running, 14 mph (4.3 min/mile)¾",23,2014-01-30,2014-01-30
+116,"running, cross country",9,2014-01-30,2014-01-30
+117,"running, (Taylor code 200)",8,2014-01-30,2014-01-30
+118,"running, stairs, up",15,2014-01-30,2014-01-30
+119,"running, on a track, team practice",10,2014-01-30,2014-01-30
+120,"running, training, pushing a wheelchair or baby carrier",8,2014-01-30,2014-01-30
+121,"running, marathon",13.3,2014-01-30,2014-01-30
+122,"archery, non-hunting",4.3,2014-01-30,2014-01-30
+123,"badminton, competitive (Taylor Code 450)",7,2014-01-30,2014-01-30
+124,"badminton, social singles and doubles, general",5.5,2014-01-30,2014-01-30
+125,"basketball, game (Taylor Code 490)",8,2014-01-30,2014-01-30
+126,"basketball, non-game, general (Taylor Code 480)",6,2014-01-30,2014-01-30
+127,"basketball, general¾",6.5,2014-01-30,2014-01-30
+128,"basketball, officiating (Taylor Code 500)",7,2014-01-30,2014-01-30
+129,"basketball, shooting baskets",4.5,2014-01-30,2014-01-30
+130,"basketball, drills, practice¾",9.3,2014-01-30,2014-01-30
+131,"basketball, wheelchair",7.8,2014-01-30,2014-01-30
+132,billiards,2.5,2014-01-30,2014-01-30
+133,bowling (Taylor Code 390),3,2014-01-30,2014-01-30
+134,"bowling, indoor, bowling alley¾",3.8,2014-01-30,2014-01-30
+135,"boxing, in ring, general",12.8,2014-01-30,2014-01-30
+136,"boxing, punching bag",5.5,2014-01-30,2014-01-30
+137,"boxing, sparring",7.8,2014-01-30,2014-01-30
+138,broomball,7,2014-01-30,2014-01-30
+139,"childrenês games, adults playing (e.g., hopscotch, 4-square, dodgeball, playground apparatus, t-ball, tetherball, marbles, arcade games), moderate effort",5.8,2014-01-30,2014-01-30
+140,"cheerleading, gymnastic moves, competitive¾",6,2014-01-30,2014-01-30
+141,"coaching, football, soccer, basketball, baseball, swimming, etc.",4,2014-01-30,2014-01-30
+142,"coaching, actively playing sport with players¾",8,2014-01-30,2014-01-30
+143,"cricket, batting, bowling, fielding",4.8,2014-01-30,2014-01-30
+144,croquet,3.3,2014-01-30,2014-01-30
+145,curling,4,2014-01-30,2014-01-30
+146,"darts, wall or lawn",2.5,2014-01-30,2014-01-30
+147,"drag racing, pushing or driving a car",6,2014-01-30,2014-01-30
+148,"auto racing, open wheel",8.5,2014-01-30,2014-01-30
+149,fencing,6,2014-01-30,2014-01-30
+150,"football, competitive",8,2014-01-30,2014-01-30
+151,"football, touch, flag, general (Taylor Code 510)",8,2014-01-30,2014-01-30
+152,"football, touch, flag, light effort",4,2014-01-30,2014-01-30
+153,"football or baseball, playing catch",2.5,2014-01-30,2014-01-30
+154,"frisbee playing, general",3,2014-01-30,2014-01-30
+155,"frisbee, ultimate",8,2014-01-30,2014-01-30
+156,"golf, general",4.8,2014-01-30,2014-01-30
+157,"golf, walking, carrying clubs",4.3,2014-01-30,2014-01-30
+158,"golf, miniature, driving range",3,2014-01-30,2014-01-30
+159,"golf, walking, pulling clubs¾",5.3,2014-01-30,2014-01-30
+160,"golf, using power cart (Taylor Code 070)",3.5,2014-01-30,2014-01-30
+161,"gymnastics, general",3.8,2014-01-30,2014-01-30
+162,hacky sack,4,2014-01-30,2014-01-30
+163,"handball, general (Taylor Code 520)",12,2014-01-30,2014-01-30
+164,"handball, team",8,2014-01-30,2014-01-30
+165,"high ropes course, multiple elements",4,2014-01-30,2014-01-30
+166,hang gliding,3.5,2014-01-30,2014-01-30
+167,"hockey, field",7.8,2014-01-30,2014-01-30
+168,"hockey, ice, general",8,2014-01-30,2014-01-30
+169,"hockey, ice, competitive",10,2014-01-30,2014-01-30
+170,"horseback riding, general",5.5,2014-01-30,2014-01-30
+171,"horse chores, feeding, watering, cleaning stalls, implied walking and lifting loads¾",4.3,2014-01-30,2014-01-30
+172,"saddling, cleaning, grooming, harnessing and unharnessing horse",4.5,2014-01-30,2014-01-30
+173,"horseback riding, trotting",5.8,2014-01-30,2014-01-30
+174,"horseback riding, canter or gallop¾",7.3,2014-01-30,2014-01-30
+175,"horseback riding,walking",3.8,2014-01-30,2014-01-30
+176,"horseback riding, jumping¾",9,2014-01-30,2014-01-30
+177,"horse cart, driving, standing or sitting",1.8,2014-01-30,2014-01-30
+178,"horseshoe pitching, quoits",3,2014-01-30,2014-01-30
+179,jai alai,12,2014-01-30,2014-01-30
+180,"martial arts, different types, slower pace, novice performers, practice",5.3,2014-01-30,2014-01-30
+181,"martial arts, different types, moderate pace (e.g., judo, jujitsu, karate, kick boxing, tae kwan do, tai-bo, Muay Thai boxing)",10.3,2014-01-30,2014-01-30
+182,juggling,4,2014-01-30,2014-01-30
+183,kickball,7,2014-01-30,2014-01-30
+184,lacrosse,8,2014-01-30,2014-01-30
+185,"lawn bowling, bocce ball, outdoor¾",3.3,2014-01-30,2014-01-30
+186,"moto-cross, off-road motor sports, all-terrain vehicle, general",4,2014-01-30,2014-01-30
+187,orienteering,9,2014-01-30,2014-01-30
+188,"paddleball, competitive",10,2014-01-30,2014-01-30
+189,"paddleball, casual, general (Taylor Code 460)",6,2014-01-30,2014-01-30
+190,"polo, on horseback",8,2014-01-30,2014-01-30
+191,"racquetball, competitive",10,2014-01-30,2014-01-30
+192,"racquetball, general (Taylor Code 470)",7,2014-01-30,2014-01-30
+193,rock or mountain climbing (Taylor Code 470)¾(Formerly code = 17120)¾,8,2014-01-30,2014-01-30
+194,"rock climbing, ascending rock, high difficulty",7.5,2014-01-30,2014-01-30
+195,"rock climbing, ascending or traversing rock, low-to-moderate difficulty¾",5.8,2014-01-30,2014-01-30
+196,"rock climbing, rappelling",5,2014-01-30,2014-01-30
+197,"rodeo sports, general, light effort",4,2014-01-30,2014-01-30
+198,"rodeo sports, general, moderate effort",5.5,2014-01-30,2014-01-30
+199,"rodeo sports, general, vigorous effort",7,2014-01-30,2014-01-30
+200,"rope jumping, fast pace, 120-160 skips/min",12.3,2014-01-30,2014-01-30
+201,"rope jumping, moderate pace, 100-120 skips/min, general,¾ 2 foot skip, plain bounce",11.8,2014-01-30,2014-01-30
+202,"rope jumping, slow pace, < 100 skips/min, 2 foot skip, rhythm bounce",8.8,2014-01-30,2014-01-30
+203,"rugby, union, team, competitive",8.3,2014-01-30,2014-01-30
+204,"rugby, touch, non-competitive",6.3,2014-01-30,2014-01-30
+205,shuffleboard,3,2014-01-30,2014-01-30
+206,"skateboarding, general, moderate effort",5,2014-01-30,2014-01-30
+207,"skateboarding, competitive, vigorous effort¾",6,2014-01-30,2014-01-30
+208,"skating, roller (Taylor Code 360)",7,2014-01-30,2014-01-30
+209,"rollerblading, in-line skating, 14.4 km/h (9.0 mph), recreational pace",7.5,2014-01-30,2014-01-30
+210,"rollerblading, in-line skating, 17.7 km/h (11.0 mph), moderate pace, exercise training",9.8,2014-01-30,2014-01-30
+211,"rollerblading, in-line skating, 21.0 to 21.7 km/h (13.0 to 13.6 mph), fast pace, exercise training",12.3,2014-01-30,2014-01-30
+212,"rollerblading, in-line skating, 24.0 km/h (15.0 mph), maximal effort",14,2014-01-30,2014-01-30
+213,"skydiving, base jumping, bungee jumping¾",3.5,2014-01-30,2014-01-30
+214,"soccer, competitive",10,2014-01-30,2014-01-30
+215,"soccer, casual, general (Taylor Code 540)",7,2014-01-30,2014-01-30
+216,"softball or baseball, fast or slow pitch, general (Taylor Code 440)",5,2014-01-30,2014-01-30
+217,"softball, practice¾",4,2014-01-30,2014-01-30
+218,"softball, officiating",4,2014-01-30,2014-01-30
+219,"softball,pitching",6,2014-01-30,2014-01-30
+220,"sports spectator, very excited, emotional, physically moving¾¾",3.3,2014-01-30,2014-01-30
+221,squash (Taylor Code 530),12,2014-01-30,2014-01-30
+222,"squash, general¾",7.3,2014-01-30,2014-01-30
+223,"table tennis, ping pong (Taylor Code 410)",4,2014-01-30,2014-01-30
+224,"tai chi, qi gong, general",3,2014-01-30,2014-01-30
+225,"tai chi, qi gong, sitting, light effort",1.5,2014-01-30,2014-01-30
+226,"tennis, general",7.3,2014-01-30,2014-01-30
+227,"tennis, doubles (Taylor Code 430)",6,2014-01-30,2014-01-30
+228,"tennis, doubles",4.5,2014-01-30,2014-01-30
+229,"tennis, singles (Taylor Code 420)",8,2014-01-30,2014-01-30
+230,"tennis, hitting balls, non-game play, moderate effort¾",5,2014-01-30,2014-01-30
+231,"trampoline, recreational",3.5,2014-01-30,2014-01-30
+232,"trampoline, competitive",4.5,2014-01-30,2014-01-30
+233,volleyball (Taylor Code 400),4,2014-01-30,2014-01-30
+234,"volleyball, competitive, in gymnasium",6,2014-01-30,2014-01-30
+235,"volleyball, non-competitive, 6 - 9 member team, general",3,2014-01-30,2014-01-30
+236,"volleyball, beach, in sand",8,2014-01-30,2014-01-30
+237,wrestling (one match = 5 minutes),6,2014-01-30,2014-01-30
+238,"wallyball, general",7,2014-01-30,2014-01-30
+239,"track and field (e.g., shot, discus, hammer throw)",4,2014-01-30,2014-01-30
+240,"track and field (e.g., high jump, long jump, triple jump, javelin, pole vault)",6,2014-01-30,2014-01-30
+241,"track and field (e.g., steeplechase, hurdles)",10,2014-01-30,2014-01-30
+242,"hiking, cross country (Taylor Code 040)",6,2014-01-30,2014-01-30
+243,hiking or walking at a normal pace through fields and hillsides¾,5.3,2014-01-30,2014-01-30
+244,"walking, household",2,2014-01-30,2014-01-30
+245,"walking, less than 2.0 mph, level, strolling, very slow",2,2014-01-30,2014-01-30
+246,"walking, 2.0 mph, level, slow pace, firm surface",2.8,2014-01-30,2014-01-30
+247,walking for pleasure (Taylor Code 010),3.5,2014-01-30,2014-01-30
+248,"walking from house to car or bus, from car or bus to go places, from car or bus to and from the worksite",2.5,2014-01-30,2014-01-30
+249,walking to neighborês house or familyês house for social reasons,2.5,2014-01-30,2014-01-30
+250,walking the dog,3,2014-01-30,2014-01-30
+251,"walking, 2.5 mph, level, firm surface",3,2014-01-30,2014-01-30
+252,"walking, 2.5 mph, downhill",3.3,2014-01-30,2014-01-30
+253,"walking, 2.8 to 3.2 mph, level, moderate pace, firm surface",3.5,2014-01-30,2014-01-30
+254,"walking, 3.5 mph, level, brisk, firm surface, walking for exercise",4.3,2014-01-30,2014-01-30
+255,"walking, 2.9 to 3.5 mph, uphill, 1 to 5% grade",5.3,2014-01-30,2014-01-30
+256,"walking, 2.9 to 3.5 mph, uphill, 6% to 15% grade",8,2014-01-30,2014-01-30
+257,"walking, 4.0 mph, level, firm surface, very brisk pace",5,2014-01-30,2014-01-30
+258,"walking, 4.5 mph, level, firm surface, very, very brisk",7,2014-01-30,2014-01-30
+259,"walking, 5.0 mph, level, firm surface",8.3,2014-01-30,2014-01-30
+260,"walking, 5.0 mph, uphill, 3% grade",9.8,2014-01-30,2014-01-30
+261,"walking, for pleasure, work break",3.5,2014-01-30,2014-01-30
+262,"walking, grass track",4.8,2014-01-30,2014-01-30
+263,"walking, normal pace, plowed field or sand¾",4.5,2014-01-30,2014-01-30
+264,"walking, to work or class (Taylor Code 015)",4,2014-01-30,2014-01-30
+265,"walking, to and from an outhouse",2.5,2014-01-30,2014-01-30
+266,"walking, for exercise, 3.5 to 4 mph, with ski poles, Nordic walking, level, moderate pace¾",4.8,2014-01-30,2014-01-30
+267,"walking, for exercise, 5.0 mph, with ski poles, Nordic walking, level, fast pace¾",9.5,2014-01-30,2014-01-30
+268,"walking, for exercise, with ski poles, Nordic walking, uphill",6.8,2014-01-30,2014-01-30
+269,"walking, backwards, 3.5 mph, level¾",6,2014-01-30,2014-01-30
+270,"walking, backwards, 3.5 mph, uphill, 5% grade",8,2014-01-30,2014-01-30
+271,"canoeing, on camping trip (Taylor Code 270)",4,2014-01-30,2014-01-30
+272,"canoeing, harvesting wild rice, knocking rice off the stalks",3.3,2014-01-30,2014-01-30
+273,"canoeing, portaging",7,2014-01-30,2014-01-30
+274,"canoeing, rowing, 2.0-3.9 mph, light effort",2.8,2014-01-30,2014-01-30
+275,"canoeing, rowing, 4.0-5.9 mph, moderate effort",5.8,2014-01-30,2014-01-30
+276,"canoeing, rowing, kayaking, competition, >6 mph, vigorous effort",12.5,2014-01-30,2014-01-30
+277,"canoeing, rowing, for pleasure, general (Taylor Code 250)",3.5,2014-01-30,2014-01-30
+278,"canoeing, rowing, in competition, or crew or sculling (Taylor Code 260)",12,2014-01-30,2014-01-30
+279,"diving, springboard or platform",3,2014-01-30,2014-01-30
+280,"kayaking, moderate effort",5,2014-01-30,2014-01-30
+281,paddle boat,4,2014-01-30,2014-01-30
+282,"skiing, water or wakeboarding (Taylor Code 220)",6,2014-01-30,2014-01-30
+283,"jet skiing, driving, in water",7,2014-01-30,2014-01-30
+284,"skindiving, fast",15.8,2014-01-30,2014-01-30
+285,"surfing, body or board, general",3,2014-01-30,2014-01-30
+286,"surfing, body or board, competitive",5,2014-01-30,2014-01-30
+287,"paddle boarding, standing",6,2014-01-30,2014-01-30
+288,"swimming laps, freestyle, fast, vigorous effort",9.8,2014-01-30,2014-01-30
+289,"swimming laps, freestyle, front crawl, slow, light or moderate effort",5.8,2014-01-30,2014-01-30
+290,"swimming, backstroke, general, training or competition",9.5,2014-01-30,2014-01-30
+291,"swimming, backstroke, recreational",4.8,2014-01-30,2014-01-30
+292,"swimming, breaststroke, general, training or competition",10.3,2014-01-30,2014-01-30
+293,"swimming, breaststroke, recreational¾",5.3,2014-01-30,2014-01-30
+294,"swimming, butterfly, general",13.8,2014-01-30,2014-01-30
+295,"swimming, crawl, fast speed, ~75 yards/minute, vigorous effort",10,2014-01-30,2014-01-30
+296,"swimming, crawl, medium speed, ~50 yards/minute, vigorous effort",8.3,2014-01-30,2014-01-30
+297,"swimming, lake, ocean, river (Taylor Codes 280, 295)",6,2014-01-30,2014-01-30
+298,"swimming, leisurely, not lap swimming, general",6,2014-01-30,2014-01-30
+299,"swimming, sidestroke, general",7,2014-01-30,2014-01-30
+300,"swimming, synchronized",8,2014-01-30,2014-01-30
+301,"swimming, treading water, fast, vigorous effort",9.8,2014-01-30,2014-01-30
+302,"swimming, treading water, moderate effort, general",3.5,2014-01-30,2014-01-30
+303,water polo,10,2014-01-30,2014-01-30
+304,water volleyball,3,2014-01-30,2014-01-30
+305,water jogging,9.8,2014-01-30,2014-01-30
+306,"skating, ice dancing",14,2014-01-30,2014-01-30
+307,"skating, ice, 9 mph or less",5.5,2014-01-30,2014-01-30
+308,"skating, ice, general (Taylor Code 360)",7,2014-01-30,2014-01-30
+309,"skating, ice, rapidly, more than 9 mph, not competitive",9,2014-01-30,2014-01-30
+310,"skating, speed, competitive",13.3,2014-01-30,2014-01-30
+311,"ski jumping, climb up carrying skis",7,2014-01-30,2014-01-30
+312,"skiing, general",7,2014-01-30,2014-01-30
+313,"skiing, cross country, 2.5 mph, slow or light effort, ski walking",6.8,2014-01-30,2014-01-30
+314,"skiing, cross country, 4.0-4.9 mph, moderate speed and effort, general",9,2014-01-30,2014-01-30
+315,"skiing, cross country, 5.0-7.9 mph, brisk speed, vigorous effort",12.5,2014-01-30,2014-01-30
+316,"skiing, cross country, >8.0 mph, elite skier, racing",15,2014-01-30,2014-01-30
+317,"skiing, cross country, hard snow, uphill, maximum, snow mountaineering",15.5,2014-01-30,2014-01-30
+318,"skiing, cross-country, skating¾",13.3,2014-01-30,2014-01-30
+319,"skiing, cross-country, biathlon, skating technique¾",13.5,2014-01-30,2014-01-30
+320,"skiing, downhill, alpine or snowboarding, light effort, active time only",4.3,2014-01-30,2014-01-30
+321,"skiing, downhill, alpine or snowboarding, moderate effort, general, active time only",5.3,2014-01-30,2014-01-30
+322,"skiing, downhill, vigorous effort, racing",8,2014-01-30,2014-01-30
+323,"skiing, roller, elite racers",12.5,2014-01-30,2014-01-30

@@ -73,22 +73,39 @@ section {
   position: relative;
 }
 
+.navbar .container {
+  position:relative;
+}
+
 .navbar-nav > li > a {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
-  padding-bottom: 3px;
-  padding-top: 34px;
+  line-height: 18px;
+  padding: 8px 5px;
   text-transform: uppercase;
 }
 
 .tagline {
-  color: #9A9C9C;
-  float: left;
+  bottom: -35px;
+  left:3px;
+  color: #FFFFFF;
   font-size: 12px;
   font-weight: 500;
-  margin-top: 38px;
+  position: absolute;
   text-transform: uppercase;
+}
+
+.navbar-nav > li > a.login {
+  margin-left:10px;
+}
+
+.navbar-nav > li > a.login {
+  color:#e0b818;
+  font-size:12px;
+}
+
+.navbar-nav > li > a.login span {
+  color:#999;
 }
 
 .home-header {
@@ -98,9 +115,14 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   color: #FFFFFF;
-  height: 613px;
+  min-height: 613px;
   position: relative;
   text-align: left;
+}
+
+.home-header .container {
+  padding-left:0;
+  padding-right:0;
 }
 
 .home-features {
@@ -120,9 +142,10 @@ section {
 }
 
 .home-features .callout h2 {
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 700;
   letter-spacing: -1px;
+  line-height: 1em;
   text-align: center;
 }
 
@@ -131,6 +154,7 @@ section {
   font-weight: 300;
   margin: 0 auto;
   max-width: 850px;
+  text-align:center;
 }
 
 .home-features .callout {
@@ -142,11 +166,18 @@ section {
 }
 
 .signup-form {
-  background: rgba(0, 0, 0, 0.4);
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
   border-radius: 12px;
-  min-height: 300px;
+  float: right;
   margin-top: 40px;
-  padding: 20px 25px;
+  max-width: 500px;
+  min-height: 300px;
+  padding: 20px 15px;
+}
+
+.signup-form .form-content {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+  padding: 25px;
 }
 
 .signup-form .form-content {
@@ -166,8 +197,114 @@ section {
   color: #f2c302;
 }
 
+.signup-form .form-group {
+  margin-bottom:0;
+}
+
+.signup-form .form-group.reg-submit {
+  margin-top:10px;
+}
+
+.signup-form .form-horizontal .control-label {
+  color: #E2E2E2;
+  font-size: 14px;
+  font-weight:500;
+  padding-left: 0;
+  text-align: right;
+}
+
+.signup-form .control-label abbr {
+  border:none;
+  color:#f2c302;
+}
+
+.signup-form .has_error .help-inline {
+  color: #FF272C;
+}
+
 footer {
   color: #9A9C9C;
   font-size: 11px;
   text-align: center;
+}
+
+// Set style based on viewport size
+@media(min-width: 768px) {
+  .navbar-nav > li > a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 36px 10px 4px;
+    text-transform: uppercase;
+  }
+
+  .home-header .container {
+    padding-left:15px;
+    padding-right:15px;
+  }
+
+  .home-features .callout h2 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  .home-features .callout h3 {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 850px;
+  }
+
+  .signup-form {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    min-height: 300px;
+    margin-top: 40px;
+    padding: 20px 25px;
+  }
+}
+
+@media(min-width: 992px) {
+  .navbar-nav > li > a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 36px 5px 4px;
+    text-transform: uppercase;
+  }
+
+  .tagline {
+    color: #9A9C9C;
+    float: left;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 35px;
+    position:relative;
+    top:0;
+    text-transform: uppercase;
+  }
+
+  .signup-form .form-horizontal .control-label {
+    color: #E2E2E2;
+    font-size: 16px;
+    padding-left: 0;
+    text-align: right;
+  }
+}
+
+@media(min-width: 1200px) {
+  
+  .navbar-nav > li > a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 34px 10px 3px;
+    text-transform: uppercase;
+  }
+
+  .signup-form .form-group {
+    margin-bottom:15px;
+  }
 }

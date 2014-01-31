@@ -1,18 +1,18 @@
 
 # => Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
-  config.wrappers :bootstrap, tag: 'div', class: 'form-group', error_class: 'error' do |b|
+  config.wrappers :bootstrap, tag: 'div', class: 'form-group', error_class: 'has_error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
-    b.wrapper :my_wrapper, tag: 'div', class: 'col-lg-10' do |ba|
+    b.wrapper :my_wrapper, tag: 'div', class: 'col-lg-6' do |ba|
       ba.use :input
       ba.use :error, wrap_with: { tag: 'span', class: 'help-inline' }
       ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
     end
   end
 
-  config.wrappers :prepend, tag: 'div', class: "form-group", error_class: 'error' do |b|
+  config.wrappers :prepend, tag: 'div', class: "form-group", error_class: 'has_error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -25,7 +25,7 @@ SimpleForm.setup do |config|
     end
   end
 
-  config.wrappers :append, tag: 'div', class: "form-group", error_class: 'error' do |b|
+  config.wrappers :append, tag: 'div', class: "form-group", error_class: 'has_error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -35,6 +35,24 @@ SimpleForm.setup do |config|
       end
       input.use :hint,  wrap_with: { tag: 'span', class: 'help-block' }
       input.use :error, wrap_with: { tag: 'span', class: 'help-inline' }
+    end
+  end
+
+  config.wrappers :horizontal, tag: 'div', class: 'form-group', error_class: 'has-error', defaults: { input_html: { class: 'default_class' } }  do |b|
+  b.use :html5
+  b.use :min_max
+  b.use :maxlength
+  b.use :placeholder
+  b.optional :pattern
+  b.optional :readonly
+
+    b.wrapper tag: 'div', class: 'controls' do |input|
+      input.use :label, class: 'horizontal'
+      input.wrapper tag: 'div' do |prepend|
+       prepend.use :input, class: 'horizontal'
+      end
+      input.use :hint,  wrap_with: { tag: 'span', class: 'help-block' }
+      input.use :error, wrap_with: { tag: 'span', class: 'help-block has-error' }
     end
   end
 

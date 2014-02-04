@@ -1,0 +1,56 @@
+<% if flash[:errors] %>
+	<% flash[:errors].each do |error| %>
+		<p class="alert alert-danger"><%= error %></p>
+	<% end %>
+<% end %>
+
+<div class="container">
+	<div class="row">
+		<h3><%= current_user.first_name %> <%= current_user.last_name %>'s Profile</h3>
+		<div class="col-lg-2">
+			<div class="profile">
+				<div class="profile-pic">
+					<%= image_tag("user-default.jpg", :alt => '') %>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="profile-table">
+				<div class="profile-row">
+					<div class="profile-cell">Gender</div>
+					<div class="profile-cell"><%=(@gender == 'M' ? 'Male' : 'Female') %></div>
+				</div>
+				<div class="profile-row">
+					<div class="profile-cell">Age </div>
+					<div class="profile-cell"><%=@age %></div>
+				</div>
+				<div class="profile-row">
+					<div class="profile-cell">My Goal is to </div>
+					<div class="profile-cell"><%=@goal %></div>
+				</div>
+				<div class="profile-row">
+					<div class="profile-cell">My Starting Weight is</div>
+					<div class="profile-cell"><%=@start_weight %> lbs.</div>
+				</div>
+				<div class="profile-row">
+					<div class="profile-cell">My Goal Weight is</div>
+					<div class="profile-cell"><%=@target_weight %> lbs.</div>
+				</div>
+				<div class="profile-row">
+					<div class="profile-cell">My Activity Level is</div>
+					<div class="profile-cell"><%=@activity_level %></div>
+				</div>
+				<div class="profile-row">
+					<div class="profile-cell">My Daily Calorie Budget is</div>
+					<div class="profile-cell"><%=@tdee %> calories</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-8">
+			<div id="user-weight-chart" class="clearfix"></div>
+			<%= high_chart("user-weight-chart", @chart) %>
+		</div>
+	</div>
+</div>

@@ -31,6 +31,8 @@ gem 'hirb'
 
 gem 'simple_form'
 
+gem 'lazy_high_charts'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -39,6 +41,7 @@ end
 gem 'bootstrap-sass'
 group :development do
   gem 'rails_layout'
+  gem 'rails-footnotes', '>= 3.7.9'
 end
 
 # Use ActiveModel has_secure_password

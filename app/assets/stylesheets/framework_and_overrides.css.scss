@@ -42,7 +42,7 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #242424;
+  background-color: #fff;
   padding-bottom: 40px;
   width: 100%;
   margin-top: 0; // accommodate the navbar
@@ -77,6 +77,15 @@ section {
   position:relative;
 }
 
+.navbar-toggle {
+  margin-top:20px;
+}
+
+.navbar .greeting {
+  color: #FFFFFF;
+  margin: 10px 10px 0 0;
+}
+
 .navbar-nav > li > a {
   font-size: 14px;
   font-weight: 400;
@@ -99,12 +108,14 @@ section {
   margin-left:10px;
 }
 
-.navbar-nav > li > a.login {
+.navbar-nav > li > a.login,
+.navbar-nav > li > a.logout  {
   color:#e0b818;
   font-size:12px;
 }
 
-.navbar-nav > li > a.login span {
+.navbar-nav > li > a.login span,
+.navbar-nav > li > a.logout span {
   color:#999;
 }
 
@@ -222,14 +233,61 @@ section {
   color: #FF272C;
 }
 
+.signup-form .btn-custom { 
+  background-color: hsl(26, 100%, 39%) !important; 
+  background-repeat: repeat-x; 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fe8223", endColorstr="#c65600"); 
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fe8223), to(#c65600)); 
+  background-image: -moz-linear-gradient(top, #fe8223, #c65600); 
+  background-image: -ms-linear-gradient(top, #fe8223, #c65600); 
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fe8223), color-stop(100%, #c65600)); 
+  background-image: -webkit-linear-gradient(top, #fe8223, #c65600); 
+  background-image: -o-linear-gradient(top, #fe8223, #c65600); 
+  background-image: linear-gradient(#fe8223, #c65600); 
+  border-color: #c65600 #c65600 hsl(26, 100%, 34.5%);
+  color:#fff;
+}
+
 footer {
   color: #9A9C9C;
   font-size: 11px;
   text-align: center;
 }
 
+.profile-pic {
+  float:left;
+  margin-right: 10px;
+  width:175px;
+  height:225px;
+}
+
+.profile-table {
+  display: table;
+  table-layout: fixed;
+  width: 400px;
+}
+
+.profile-row {
+  display: table-row;
+}
+
+.profile-cell {
+  display: table-cell;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 // Set style based on viewport size
 @media(min-width: 768px) {
+  .navbar .greeting {
+    color: #FFFFFF;
+    margin: 10px 10px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+  }
+
   .navbar-nav > li > a {
     font-size: 14px;
     font-weight: 400;

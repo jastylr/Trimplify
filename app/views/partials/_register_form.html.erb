@@ -3,15 +3,15 @@
   <h3>It's Simple and It's FREE!</h3>
   <p><strong>Trimplify</strong> allows you to set weight loss goals through simple online tools and track your progress.</p>
   <div class="form-content">
-  	<%= simple_form_for @user, defaults: { my_wrapper: { class: 'col-lg-6' } } do |f| %>
+  	<%= simple_form_for @user, defaults: { my_wrapper_html: { class: 'col-lg-6' } } do |f| %>
 			<%= f.input :first_name, label: "First name:" %>
 			<%= f.input :last_name, label: "Last name:" %>
 			<%= f.input :email, label: "Email address:" %>
 			<%= f.input :password, label: "Password:" %>
 			<%= f.input :password_confirmation, label: "Confirm password:" %>
 			<div class="form-group reg-submit">
-				<div class="col-lg-6 col-lg-offset-4">
-					<%= f.button :submit, "Let's Get Started", :class => 'btn-primary' %>
+				<div class="col-lg-4 col-lg-offset-4">
+					<%= f.button :submit, "Let's Get Started", :class => 'btn-custom btn-lg' %>
 				</div>
 			</div>
 		<% end %>

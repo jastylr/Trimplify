@@ -1,4 +1,3 @@
-<%# navigation styled for Bootstrap 3.0 %>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -12,6 +11,11 @@
       <div class="tagline">Weight Loss Management, Simplified!</div>
     </div>
     <div class="collapse navbar-collapse">
+      <% if signed_in? %>
+        <div class="greeting">
+          Hello <%= current_user.first_name %>, <%= link_to "View profile", user_path(current_user.id) %>
+        </div>
+      <% end %>
       <ul class="nav navbar-nav navbar-right">
         <%= render 'layouts/navigation_links' %>        
       </ul>

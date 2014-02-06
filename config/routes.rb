@@ -5,8 +5,9 @@ Trimplify::Application.routes.draw do
   get "login" => "sessions#new"
   post "sessions/create"
   get "logout" => "sessions#destroy", as: :logout
+
   # to preserve original prefix
   resources :users, except: [:create]
-  resources :user_vitals
+  resources :user_vitals, only: [:new, :create, :edit, :update]
   
 end

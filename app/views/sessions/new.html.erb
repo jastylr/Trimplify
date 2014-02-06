@@ -8,8 +8,8 @@
 	      <div class="col-md-6">
 	      	<h1>Sign In</h1>
 					<%= simple_form_for @user, url: sessions_create_path do |f| %>
-						<%= f.input :email %>
-						<%= f.input :password %>
+						<%= f.input :email, label: "Email address:", my_wrapper_html: { class: 'col-lg-6'} %>
+						<%= f.input :password, label: "Password:", my_wrapper_html: { class: 'col-lg-6'} %>
 						<div class="form-group reg-submit">
 							<div class="col-lg-6 col-lg-offset-4">
 								<%= f.button :submit, "Sign In", :class => 'btn btn-primary btn-lg' %>

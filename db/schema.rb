@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140131000746) do
+ActiveRecord::Schema.define(version: 20140205062932) do
 
   create_table "activities", force: true do |t|
     t.string   "description"
@@ -45,10 +45,8 @@ ActiveRecord::Schema.define(version: 20140131000746) do
     t.string   "goal"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_vital_id"
+    t.integer  "calorie_adj"
   end
-
-  add_index "goal_types", ["user_vital_id"], name: "index_goal_types_on_user_vital_id"
 
   create_table "tdee_factors", force: true do |t|
     t.string   "level_name"
@@ -60,7 +58,6 @@ ActiveRecord::Schema.define(version: 20140131000746) do
 
   create_table "user_vitals", force: true do |t|
     t.string   "gender",         limit: 1
-    t.date     "birthdate"
     t.integer  "height"
     t.integer  "start_weight"
     t.integer  "target_weight"
@@ -71,6 +68,7 @@ ActiveRecord::Schema.define(version: 20140131000746) do
     t.integer  "tdee_factor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "age"
   end
 
   add_index "user_vitals", ["goal_type_id"], name: "index_user_vitals_on_goal_type_id"

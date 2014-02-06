@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   
   def new
   	@user = User.new
-  	@user.user_vital.build
   end
 
   def create
@@ -21,11 +20,13 @@ class UsersController < ApplicationController
   	# 	redirect_to login_path, flash: {errors: ["You don't have access to view this user profile."]}
   	# end
 
+  	# Get the user vital for the current user otherwise redirect them to fill
+  	# out their user vitals information
   	user_vital = current_user.user_vital
 		if !user_vital.nil?
 			# Calculate BMI, BMR TDEE
 			@gender = user_vital.gender
-			@age = UserVital.calculate_age(user_vital.birthdate)
+			@age = user_vital.age
 			@height = user_vital.height
 			@start_weight = user_vital.start_weight
 			@target_weight = user_vital.target_weight
@@ -45,8 +46,16 @@ class UsersController < ApplicationController
 			@bmi = bmi_bmr['bmi']
 			@bmr = bmi_bmr['rbmr']
 			@tdee = bmi_bmr['tdee']
+			
+			#@adj_tdee = @tdee + user_vital.goal_type.calorie_adj.to_f
 
-			@weights = current_user.weight_stats.where(:created_at => 30.days.ago.to_date..Date.today.end_of_day).select("weight_stats.created_at, weight_stats.weight")
+			@pound_diff = @start_weight - @target_weight
+			days = (@pound_diff * 3500) / user_vital.goal_type.calorie_adj.abs
+			@complete_date = (Date.today + days).to_time.strftime('%B %e, %Y')
+			
+
+			#@weights = current_user.weight_stats.where(:created_at => 30.days.ago.to_date..Date.today.end_of_day).select("weight_stats.created_at, weight_stats.weight")
+			@weights = current_user.weight_stats.select("weight_stats.created_at, weight_stats.weight")
 			@weight = @weights.map { |date| [date.created_at.to_i * 1000, date.weight.to_f] }
 
 
@@ -59,36 +68,23 @@ class UsersController < ApplicationController
 			    	:min => @target_weight - 2},
 			    {:title => {:text => "BMI"},  :opposite => true},
 			  ] 
-			  #f.labels(:items=>[:html=>"Total fruit consumption", :style=>{:left=>"40px", :top=>"8px", :color=>"black"} ]) 
-			  f.options[:plotOptions] = {line: {pointInterval: 1.day, pointStart: 10.days.ago}}
-			  f.series(:type => 'area', :name=> 'Daily Weight', :data=> @weight)
+
+				#  $leftYaxis->plotLines[] = array(
+				#   "value" => $data['target_weight'],
+				#   "color" => "#a7d573",
+				#   "width" => 2,
+				#   "label" => array("text" => "Target Weight"),
+				#   "zIndex" => 10
+				# );
+    
+			  f.options[:plotOptions] = {area: {dataLabels: {enabled: true, :style => {:font_weight => 'bold'}}, pointInterval: 1.day, pointStart: 10.days.ago}}
+			  f.series(:type => 'area', :name=> 'Weight', :data=> @weight)
 			end
-
-			# $leftYaxis->allowDecimals = false;
-   #  $leftYaxis->tickInterval = 2;
-   #  $leftYaxis->min = $data['target_weight'] - 2;
-
-   #  $leftYaxis->labels->formatter = new HighchartJsExpr("function() {
-   #      return this.value +' lbs.'; }");
-
-   #  $leftYaxis->labels->style->color = "#20a8d2";
-   #  $leftYaxis->title->text = "Weight";
-   #  $leftYaxis->title->style->color = "#20a8d2";
-
-			# // Plot the target weight line
-   #  $leftYaxis->plotLines[] = array(
-   #    "value" => $data['target_weight'],
-   #    "color" => "#a7d573",
-   #    "width" => 2,
-   #    "label" => array("text" => "Target Weight"),
-   #    "zIndex" => 10
-   #  );
-
 
 		else
 			# The user has not entered his/her vitals yet so redirect them to do so
 			#### USER HAS NOT ENTERED THEIR VITAL SO REDIRECT THEM TO DO SO. RIGHT NOW JUST GOING TO HOME PAGE
- 			redirect_to root_path, flash: {errors: ["You must first enter your user vitals information."]}
+ 			redirect_to new_user_vital_path, flash: {errors: ["In order to view your weight profile, you must enter your user vitals information below."]}
 		end
   end
 

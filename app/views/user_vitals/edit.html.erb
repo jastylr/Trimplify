@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="vitals-form col-lg-8">
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <p class="alert alert-danger"><%= error %></p>
+      <% end %>
+    <% end %>
+    <h1>Edit Your User Vitals</h1>
+    <div class="form-content">
+    	<%= render 'vitals_form' %>
+    </div>
+  </div>
+</div>

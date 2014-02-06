@@ -14,6 +14,11 @@ img {
   @extend .img-responsive;
   margin: 0 auto;
   }
+
+.strong {
+  font-weight:700;
+}
+
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
@@ -254,11 +259,16 @@ footer {
   text-align: center;
 }
 
+input[id="user_vital_start_weight"],
+input[id="user_vital_target_weight"] {
+  width:68px;
+}
+
 .profile-pic {
   float:left;
   margin-right: 10px;
   width:175px;
-  height:225px;
+  height:165px;
 }
 
 .profile-table {
@@ -273,15 +283,167 @@ footer {
 
 .profile-cell {
   display: table-cell;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
+  line-height:20px;
+}
+
+.box-container{
+    position:relative;
+    z-index:0;
+    /*background:#fff;
+    width:40%;
+    min-width:360px;
+    margin:40px auto;
+    padding:30px 30px 45px 30px;
+    -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+    border:1px solid #e7e7e7;*/
+}
+
+/*********************
+VARS
+*********************/
+
+$general-background-color:  rgba(255,255,255,0);
+$text-color:  #fff;
+
+/* bar colors */
+$blue:    rgba(0,169,224,1);
+/*$red:   rgba(239,85,40,1);*/
+$red:   rgba(237,34,34,1);
+$green:   rgba(100,182,33,1);
+$orange:  rgba(240,127,5,1);
+$purple:  rgba(148,6,207,1);
+
+
+
+/*********************
+MIXINS
+*********************/
+
+/* border radius */
+@mixin border-radius($radius) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit", "-moz", "-ms", "-o",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-border-radius: $radius;
+  }
+  border-radius: $radius;
+}
+
+
+/* gradient backgrounds and reflections */
+@mixin css-gradient($from, $to, $start, $end) {
+  background: $to;
+  background: -webkit-linear-gradient(top, $from $start, $to $end);
+  background: -moz-linear-gradient(top, $from $start, $to $end);
+  background: -o-linear-gradient(top, $from $start, $to $end);
+  background: linear-gradient(to bottom, $from $start, $to $end);
+}
+
+
+/* let's make an actual bar */
+@mixin bar($current-color){ 
+  display:block;
+  position:relative;
+  height:30px;
+  float:left;
+  margin:20px 1px 20px 0;
+  text-align:center;
+  line-height:2.3em;
+  color:$text-color;
+  box-shadow: inset  0px 1px 0px rgba(255, 255, 255, .5);
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  border:1px solid $current-color;
+  @include css-gradient( lighten($current-color,30%), $current-color, 0%, 100%);
+  
+  &:after
+  {
+    content:"";
+    position:absolute;
+    z-index:-1;
+    top:30px;
+    width:100%;
+    height:100%;
+    border-radius:inherit;
+    left:-1px;
+    padding:1px;
+    @include css-gradient( transparentize($current-color,0.5), $general-background-color, 0%, 40%);
+  }
+}
+
+
+/* and add more colorful bars. Now you only need to import BAR mixin, and set $current-color variable, with, and border radius */
+.blue-bar{
+  @include bar($blue);  
+  width:55%;
+  @include border-radius(8px 0 0 8px);
+}
+
+.red-bar{
+  @include bar($red); 
+  /*width:39%;
+  @include border-radius(0 8px 8px 0);*/
+}
+
+.green-bar{
+  @include bar($green); 
+  width:55%;
+  @include border-radius(8px 0 0 8px);
+}
+
+.orange-bar{
+  @include bar($orange);  
+  width:25%;
+  @include border-radius(0 8px 8px 0);
+}
+
+.purple-bar{
+  @include bar($purple);  
+  /*width:29%;
+  @include border-radius(0 8px 8px 0);*/
+}
+
+
+
+.box {
+  margin: 10px 5px 10px 0;
+  width:150px;
+  height:70px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  @include border-radius(8px);
+}
+
+.box p.title {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 0.5em;
+  margin: 20px 0 3px;
+}
+
+.box p.title span {
+  font-size: 14px;
+  font-weight:normal;
+  letter-spacing:0;
+}
+
+.box p.desc {
+  color:#474646;
+  font-size: 12px;
+  font-weight:normal;
+  line-height:18px;
+  margin:0;
+  text-shadow:none;
 }
 
 // Set style based on viewport size
 @media(min-width: 768px) {
   .navbar .greeting {
     color: #FFFFFF;
-    margin: 10px 10px 0 0;
+    margin: 6px 10px 0 0;
     position: absolute;
     right: 0;
     top: 0;

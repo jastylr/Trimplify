@@ -39,6 +39,11 @@ group :doc do
 end
 
 gem 'bootstrap-sass'
+
+group :assets do
+	gem 'smooth-scroll-rails'
+end
+
 group :development do
   gem 'rails_layout'
   gem 'rails-footnotes', '>= 3.7.9'

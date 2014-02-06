@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
 
-	has_one :user_vital
-	has_many :weight_stats
-	has_many :exercise_stats
-	has_many :food_stats
+	has_one :user_vital, dependent: :destroy
+	has_many :weight_stats, dependent: :destroy
+	has_many :exercise_stats, dependent: :destroy
+	has_many :food_stats, dependent: :destroy
 	
 	validates :first_name, :last_name, :email, :password, :password_confirmation, presence: true
 	validates :email, uniqueness: true

@@ -1,0 +1,57 @@
+<%= simple_form_for @user_vital, defaults: { my_wrapper_html: { class: 'col-lg-6' } } do |f| %>
+	<%= f.input :gender, 
+      collection: [['M', 'Male'], ['F', 'Female']],
+      label: 'Select your gender', 
+      label_method: :last, 	
+      value_method: :first,
+      as: :select,
+      my_wrapper_html: { class: 'col-lg-2' }
+	%>
+
+  <%= f.input :age, label: "Enter your age:", my_wrapper_html: { class: 'col-lg-2'} %>
+  
+  <%= f.input :height, label: "Enter your height:", my_wrapper_html: { class: 'col-lg-6 form-inline'} do %>
+    <%= f.input_field :height_feet,
+        collection: 3..8,
+        label: false
+    %>
+    <%= content_tag :span, " ft." %>
+   
+    <%= f.input :height_inches,
+        collection: 0..11,
+        label: false
+    %>
+    <%= content_tag :span, " in." %>
+  <% end %>
+
+  <%#= f.input :height_feet,
+      collection: 3..8,
+			label: 'Enter your height',
+			my_wrapper_html: { class: 'col-lg-2' }
+  %>
+  <%#= f.input :height_inches,
+      collection: 0..11,
+      label: '',
+      my_wrapper_html: { class: 'col-lg-2' }
+  %>
+  
+  <%= f.input :start_weight, label: "Enter your current weight:", my_wrapper_html: { class: 'col-lg-3 form-inline'} do %>
+    <%= f.input_field :start_weight, label: false %>
+    <%= content_tag :span, " lbs." %>
+  <% end %>
+
+  <%= f.input :target_weight, label: "Enter your goal weight:", my_wrapper_html: { class: 'col-lg-3 form-inline'} do %>
+    <%= f.input_field :target_weight, label: false %>
+    <%= content_tag :span, " lbs." %>
+  <% end %>
+
+  <%= f.input :tdee_factor_id, collection: TdeeFactor.all.map {|factor| [factor.level_name, factor.id]}.sort, label: "Select your activity level:", my_wrapper_html: { class: 'col-lg-4'} %>
+
+  <%= f.input :goal_type_id, collection: GoalType.all.map {|goal| [goal.goal, goal.id]}.sort, label: "Select a weight goal:", my_wrapper_html: { class: 'col-lg-4'} %>
+  
+	<div class="form-group reg-submit">
+		<div class="col-lg-7 col-lg-offset-5">
+			<%= f.button :submit, "Save", :class => 'btn-primary btn-lg' %>
+		</div>
+	</div>
+<% end %>

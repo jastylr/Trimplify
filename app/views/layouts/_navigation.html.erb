@@ -12,9 +12,15 @@
     </div>
     <div class="collapse navbar-collapse">
       <% if signed_in? %>
+        <% if current_user.user_vital != nil %>
         <div class="greeting">
           Hello <%= current_user.first_name %>, <%= link_to "View profile", user_path(current_user.id) %>
         </div>
+        <% else %>
+          <div class="greeting">
+            Hello <%= current_user.first_name %>, <%= link_to "Create profile", new_user_vital_path %>
+          </div>
+        <% end %>
       <% end %>
       <ul class="nav navbar-nav navbar-right">
         <%= render 'layouts/navigation_links' %>        

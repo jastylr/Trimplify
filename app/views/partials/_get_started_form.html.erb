@@ -12,9 +12,13 @@
           as: :select,
           my_wrapper_html: { class: 'col-lg-4' }
 			%>
-			<%= f.input :height,
+			<%= f.input :height_ft,
 					collection: 3..8,
 					label: 'Enter your height',
+					my_wrapper_html: { class: 'col-lg-2' }
+      %>
+      <%= f.input :height_in,
+					collection: 0..11,
 					my_wrapper_html: { class: 'col-lg-2' }
       %>
 			<div class="form-group reg-submit">

@@ -1,0 +1,2 @@
+module UserVitalsHelper
+end

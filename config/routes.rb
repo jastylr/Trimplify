@@ -9,5 +9,6 @@ Trimplify::Application.routes.draw do
   # to preserve original prefix
   resources :users, except: [:create]
   resources :user_vitals, only: [:new, :create, :edit, :update]
+  resources :weight_stats, only: [:new, :create]
   
 end

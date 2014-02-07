@@ -9,27 +9,46 @@ class UserVital < ActiveRecord::Base
   
   validates :gender, :age, :height_feet, :height_inches, :start_weight, :target_weight, :tdee_factor_id, :goal_type_id, presence: true
   accepts_nested_attributes_for :tdee_factor, :goal_type
-  before_validation :heightToInches 
+  before_validation :heightToInches
 
-		def height_feet
-      height.floor/12 if height
+  def height_feet
+    height.floor/12 if height
+  end
+
+  def height_feet=(feet)
+    @feet = feet
+  end
+
+  def height_inches
+    if height && height%12 != 0
+      height%12
     end
+  end
 
-    def height_inches
-      if height && height%12 != 0
-        height%12
-      end
-    end
+  def height_inches=(inches) #on save?
+    @inches = inches
+  end
 
-  # Perform conversion from Feet and Inches to just inches or cm
   def heightToInches
-  	self.height = (height_feet.to_i * 12) + height_inches.to_i
+    self.height = @feet.to_d*12 + @inches.to_d #if @feet.present?
   end
 
-  def inchesToFeetInches
-  	@height_feet = self.height / 12
-  	@height_inches = self.height % 12
-  end
+	# def height_feet
+ #    height.floor/12 if height
+ #  end
+
+ #  def height_inches
+ #    height % 12 if height
+ #  end
+
+ #  def height_inches=(inches) #on save?
+ #    @inches = inches
+ #  end	
+
+ #  # Perform conversion from Feet and Inches to just inches or cm
+ #  def heightToInches
+ #  	self.height = (height_feet.to_i * 12) + height_inches.to_i
+ #  end
 
   # model method to calculate vital information
   def self.calcBMR(method, gender, height, weight, age, act_level)

@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 	# The :on => :create makes sure that this condition is checked when
 	# a user is first created, so on User.create or User.new + .save
 	# but NOT on update.
+	accepts_nested_attributes_for :weight_stats
 
 	has_secure_password
 end

@@ -21,7 +21,12 @@ class UserVitalsController < ApplicationController
 	end
 
 	def update
-
+		@user_vital = UserVital.find(params[:id])
+    if @user_vital.update_attributes(user_vital_params)
+    	redirect_to user_path(current_user.id)
+    else
+      redirect_to :back, flash: {errors: ["Could not update your user vitals profile"]}
+    end
 	end
 
 	private

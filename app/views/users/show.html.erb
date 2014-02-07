@@ -6,46 +6,45 @@
 
 <div class="container">
 	<div class="row">
-		<h3><%= current_user.first_name %> <%= current_user.last_name %>'s Profile</h3>
-		<div class="col-lg-2">
-			<div class="profile">
-				<div class="profile-pic">
-					<%= image_tag((@gender == 'M' ? "user-default.jpg" : "user-default-fem.jpg"), :alt => '') %>
+		<div class="profile-header clearfix">
+			<h3><%= current_user.first_name %> <%= current_user.last_name %>'s Profile</h3>
+			<div class="col-lg-2">
+				<div class="profile">
+					<div class="profile-pic">
+						<%= image_tag(@profile_pic.nil? ? (@gender == 'M' ? "profiles/user-default.jpg" : "profiles/user-default-fem.jpg") : @profile_pic, :alt => '') %>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-lg-6">
-			<div class="profile-table">
-				<div class="profile-row">
-					<div class="profile-cell strong">Gender</div>
-					<div class="profile-cell"><%=(@gender == 'M' ? 'Male' : 'Female') %></div>
-				</div>
-				<div class="profile-row">
-					<div class="profile-cell strong">Age </div>
-					<div class="profile-cell"><%=@age %></div>
-				</div>
-				<div class="profile-row">
-					<div class="profile-cell strong">My Goal is to </div>
-					<div class="profile-cell"><%=@goal %></div>
-				</div>
-				<div class="profile-row">
-					<div class="profile-cell strong">My Starting Weight is</div>
-					<div class="profile-cell"><%=@start_weight %> lbs.</div>
-				</div>
-				<div class="profile-row">
-					<div class="profile-cell strong">My Target Weight is</div>
-					<div class="profile-cell"><%=@target_weight %> lbs.</div>
-				</div>
-				<div class="profile-row">
-					<div class="profile-cell strong">My Activity Level is</div>
-					<div class="profile-cell"><%=@activity_level %></div>
-				</div>
-				<div class="profile-row">
-					<div class="profile-cell strong">My Daily Calorie Budget is</div>
-					<div class="profile-cell"><%=@tdee %> calories</div>
-				</div>
-				<div>
-					<%= link_to "Edit my Vitals", edit_user_vital_path %>
+			<div class="col-lg-6">
+				<div class="profile-table">
+					<div class="profile-row">
+						<div class="profile-cell strong">Gender</div>
+						<div class="profile-cell"><%=(@gender == 'M' ? 'Male' : 'Female') %></div>
+					</div>
+					<div class="profile-row">
+						<div class="profile-cell strong">Age </div>
+						<div class="profile-cell"><%=@age %></div>
+					</div>
+					<div class="profile-row">
+						<div class="profile-cell strong">My Goal is to </div>
+						<div class="profile-cell"><%=@goal %></div>
+					</div>
+					<div class="profile-row">
+						<div class="profile-cell strong">My Starting Weight is</div>
+						<div class="profile-cell"><%=@start_weight %> lbs.</div>
+					</div>
+					<div class="profile-row">
+						<div class="profile-cell strong">My Target Weight is</div>
+						<div class="profile-cell"><%=@target_weight %> lbs.</div>
+					</div>
+					<div class="profile-row">
+						<div class="profile-cell strong">My Activity Level is</div>
+						<div class="profile-cell"><%=@activity_level %></div>
+					</div>
+					
+					<div>
+						<%= link_to "Edit my Vitals", edit_user_vital_path %>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -54,26 +53,39 @@
 		<div class="col-lg-8">
 			<div class="box-container clearfix">
 				<div class="box green-bar">
-					<p class="title"><%= @bmi %> <span>&nbsp;</span></p>
+					<p id="current_weight" class="title"><%= @current_weight %> <span> lbs.</span></p>
+					<p class="desc">Your Current Weight</p>
+				</div>
+				<div class="box red-bar">
+					<p id="bmi" class="title"><%= @bmi %> <span>&nbsp;</span></p>
 					<p class="desc">Your BMI</p>
 				</div>
+				<div class="box purple-bar">
+					<p id="bmr" class="title"><%= @bmr %> <span>k/Cal</span></p>
+					<p class="desc">Your Resting BMR</p>
+				</div>
 				<div class="box blue-bar">
-					<p class="title"><%= @tdee %> <span>k/Cal</span></p>
+					<p id="tdee" class="title"><%= @tdee %> <span>k/Cal</span></p>
 					<p class="desc">Daily Calorie Budget</p>
 				</div>
+			</div>
+			<div class="col-lg-6">
+				<%= render 'weight_input_form' %>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-8">
 			<div class="complete-date">
-				<span>Your Completion Date to lose <%= @pound_diff %> pounds is: <%= @complete_date %></span>
+				<p class="date"><%= @complete_date %></p>
+				<p>Estimated completion date to lose <%= @pound_diff %> pounds at 1 pound per week is:</p>				
 			</diV>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-lg-8">
+		<div class="col-lg-12">
+			<h4>Today's Calories at a Glance</h4>
 			<div class="box-container clearfix">
 				<div class="bar green-bar">consumed: 1850</div>
 				<div class="bar orange-bar">burned: 428</div>
@@ -82,7 +94,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-lg-8">
+		<div class="col-lg-10">
 			<div id="user-weight-chart" class="clearfix"></div>
 			<%= high_chart("user-weight-chart", @chart) %>
 		</div>

@@ -40,9 +40,9 @@ end
 
 gem 'bootstrap-sass'
 
-group :assets do
-	gem 'smooth-scroll-rails'
-end
+# group :assets do
+# 	gem 'smooth-scroll-rails'
+# end
 
 group :development do
   gem 'rails_layout'

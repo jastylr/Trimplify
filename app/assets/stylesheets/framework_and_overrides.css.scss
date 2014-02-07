@@ -260,8 +260,15 @@ footer {
 }
 
 input[id="user_vital_start_weight"],
-input[id="user_vital_target_weight"] {
+input[id="user_vital_target_weight"],
+input[id="weight_stat_weight"] {
   width:68px;
+}
+
+.profile-header {
+  border-bottom: 2px solid #000;
+  background: #eee;
+  padding:10px;
 }
 
 .profile-pic {
@@ -285,6 +292,20 @@ input[id="user_vital_target_weight"] {
   display: table-cell;
   font-size: 14px;
   line-height:20px;
+}
+
+.complete-date {
+  background: none repeat scroll 0 0 #EEEEEE;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+}
+
+.complete-date .date {
+  color: #64B621;
+  font-size: 36px;
+  padding-top: 10px;
 }
 
 .box-container{

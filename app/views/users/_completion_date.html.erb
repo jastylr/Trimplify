@@ -1,0 +1,14 @@
+<%
+# Determine how many pounds the user wants to lose or gain
+	# and then calculate the completion date based on their weight goal
+	user_vital = current_user.user_vital
+	pound_diff = user_vital.start_weight - user_vital.target_weight
+	if user_vital.goal_type.calorie_adj != 0
+		days = (pound_diff * 3500) / user_vital.goal_type.calorie_adj.abs
+	else
+		days = 0
+	end
+	@complete_date = (Date.today + days).to_time.strftime('%B %e, %Y')
+%>
+<p class="date"><%= @complete_date %></p>
+<p>Estimated completion date to lose <%= @pound_diff %> pounds at 1 pound per week is:</p>

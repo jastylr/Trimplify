@@ -267,7 +267,7 @@ input[id="weight_stat_weight"] {
 
 .profile-header {
   border-bottom: 2px solid #000;
-  background: #eee;
+  background: image-url("profile-hdr-bkg-2.png") repeat-x 0 0;
   padding:10px;
 }
 
@@ -284,6 +284,10 @@ input[id="weight_stat_weight"] {
   width: 400px;
 }
 
+.profile-table .edit-vitals {
+  margin-top:14px;
+}
+
 .profile-row {
   display: table-row;
 }
@@ -298,6 +302,7 @@ input[id="weight_stat_weight"] {
   background: none repeat scroll 0 0 #EEEEEE;
   font-size: 18px;
   font-weight: 700;
+  margin:20px 0;
   padding: 10px;
   text-align: center;
 }
@@ -311,6 +316,7 @@ input[id="weight_stat_weight"] {
 .box-container{
     position:relative;
     z-index:0;
+    margin:5px 0 15px;
     /*background:#fff;
     width:40%;
     min-width:360px;
@@ -334,7 +340,8 @@ $blue:    rgba(0,169,224,1);
 $red:   rgba(237,34,34,1);
 $green:   rgba(100,182,33,1);
 $orange:  rgba(240,127,5,1);
-$purple:  rgba(148,6,207,1);
+/*$purple:  rgba(148,6,207,1);*/
+$purple:  rgba(178,66,226,1);
 
 
 
@@ -369,7 +376,7 @@ MIXINS
   position:relative;
   height:30px;
   float:left;
-  margin:20px 1px 20px 0;
+  margin:5px 1px 20px 0;
   text-align:center;
   line-height:2.3em;
   color:$text-color;
@@ -430,7 +437,7 @@ MIXINS
 
 
 .box {
-  margin: 10px 5px 10px 0;
+  margin: 10px 5px 0 0;
   width:150px;
   height:70px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
@@ -458,6 +465,28 @@ MIXINS
   line-height:18px;
   margin:0;
   text-shadow:none;
+}
+
+#weight-input-form {
+  margin-right:10px;
+}
+
+#weight-input-form form {
+  display:inline-block;
+  width: 320px;
+}
+
+#weight-input-form .notice{
+  color:#fff;
+  background:#5cb85c;
+  display:none;
+  border: 1px solid green;
+  border-radius: 6px;
+  padding:8px;
+}
+
+.weight-input-date span {
+  font-weight:700;
 }
 
 // Set style based on viewport size

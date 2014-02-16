@@ -8,6 +8,11 @@ class UserVitalsController < ApplicationController
 		@user_vital = UserVital.new(user_vital_params)
 		@user_vital.user = current_user
 		if @user_vital.save
+			# save the user's starting weight in the weight stats table
+			@weight_stat = WeightStat.new
+			@weight_stat.weight = @user_vital.start_weight
+			@weight_stat.user = current_user
+			@weight_stat.save
   		redirect_to user_path(current_user.id)
   	else
   		#render "welcome/index" 
@@ -25,7 +30,7 @@ class UserVitalsController < ApplicationController
     if @user_vital.update_attributes(user_vital_params)
     	redirect_to user_path(current_user.id)
     else
-      redirect_to :back, flash: {errors: ["Could not update your user vitals profile"]}
+      redirect_to :back, flash: {errors: [@user_vital.errors.full_messages]}
     end
 	end
 

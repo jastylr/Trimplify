@@ -43,42 +43,33 @@
 					</div>
 					
 					<div>
-						<%= link_to "Edit my Vitals", edit_user_vital_path %>
+						<%= link_to edit_user_vital_path, :class => 'edit-vitals btn btn-primary btn-sm' do %>
+					    <%= content_tag(:span, "" ,:class=>' glyphicon glyphicon-pencil') %> Edit Vitals
+					  <% end %>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div id="user-vitals">
+		<%= render 'user_vitals' %>
+	</div>
+
 	<div class="row">
 		<div class="col-lg-8">
-			<div class="box-container clearfix">
-				<div class="box green-bar">
-					<p id="current_weight" class="title"><%= @current_weight %> <span> lbs.</span></p>
-					<p class="desc">Your Current Weight</p>
-				</div>
-				<div class="box red-bar">
-					<p id="bmi" class="title"><%= @bmi %> <span>&nbsp;</span></p>
-					<p class="desc">Your BMI</p>
-				</div>
-				<div class="box purple-bar">
-					<p id="bmr" class="title"><%= @bmr %> <span>k/Cal</span></p>
-					<p class="desc">Your Resting BMR</p>
-				</div>
-				<div class="box blue-bar">
-					<p id="tdee" class="title"><%= @tdee %> <span>k/Cal</span></p>
-					<p class="desc">Daily Calorie Budget</p>
-				</div>
-			</div>
-			<div class="col-lg-6">
+			<div id="weight-input-form" class="clearfix">
 				<%= render 'weight_input_form' %>
+				<span class="notice"></span>
 			</div>
+			<div class="weight-input-date">Last recorded weight date: <span><%= @weight_input_date %></span></div>
 		</div>
 	</div>
+
 	<div class="row">
 		<div class="col-lg-8">
-			<div class="complete-date">
-				<p class="date"><%= @complete_date %></p>
-				<p>Estimated completion date to lose <%= @pound_diff %> pounds at 1 pound per week is:</p>				
+			<div id="goal-date" class="complete-date">
+				<%= render 'completion_date' %>
 			</diV>
 		</div>
 	</div>
@@ -95,8 +86,9 @@
 
 	<div class="row">
 		<div class="col-lg-10">
-			<div id="user-weight-chart" class="clearfix"></div>
-			<%= high_chart("user-weight-chart", @chart) %>
+			<div id="user-weight-chart" class="clearfix">
+				<%= render 'weight_chart' %>
+			</div>			
 		</div>
 	</div>
 </div>

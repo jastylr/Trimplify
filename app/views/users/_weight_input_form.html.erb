@@ -1,4 +1,4 @@
-<%= simple_form_for(@weight_stat, remote: true) do |f| %> 
+<%= simple_form_for @weight_stat, remote: true do |f| %> 
 
 	<%= f.input :weight, label: "Today's weight:", my_wrapper_html: { class: 'form-inline'} do %>
     <%= f.input_field :weight,
@@ -6,7 +6,9 @@
         label: false
     %>
     <%= content_tag :span, " lbs." %>
-   
-    <%= f.button :submit, "Record", :class => 'btn-success btn-sm' %>
+		
+		<%= f.button :submit, "Record", :class => 'btn-success btn-sm' do %>
+    	<%= content_tag(:span, "" ,:class=>' glyphicon glyphicon-plus') %>
+    <% end %>    
   <% end %>
 <% end %>

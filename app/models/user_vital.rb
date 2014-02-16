@@ -8,6 +8,7 @@ class UserVital < ActiveRecord::Base
   belongs_to :tdee_factor
   
   validates :gender, :age, :height_feet, :height_inches, :start_weight, :target_weight, :tdee_factor_id, :goal_type_id, presence: true
+  validates :age, :start_weight, :target_weight, numericality: {greater_than: 0}
   accepts_nested_attributes_for :tdee_factor, :goal_type
   before_validation :heightToInches
 

@@ -1,0 +1,56 @@
+<%
+	# Get the current user's vitals
+	@user_vital = current_user.user_vital
+
+	# Get the current user's daily weight entries
+	weights = current_user.weight_stats.select("weight_stats.created_at, weight_stats.weight")
+	if !weights.empty?
+		# Put the weights into an array in a format that Highcharts can use
+		weight = weights.map { |date| [date.created_at.to_i * 1000, date.weight.to_f] }
+		@current_weight = weights.last.weight
+		@weight_input_date = weights.last.created_at.to_date.to_time.strftime('%B %e, %Y')
+	else
+		weight = [Date.today.to_time.to_i * 1000, @user_vital.start_weight]
+		@current_weight = @user_vital.start_weight
+	end
+
+	# Calculate the user's BMI, BMR, TDDE
+	bmi_bmr = UserVital.calcBMR(1, @user_vital.gender, @user_vital.height, @current_weight, @user_vital.age, @user_vital.tdee_factor.multiplier.to_f)
+	@bmi = bmi_bmr['bmi']
+	@bmr = bmi_bmr['rbmr']
+	@tdee = bmi_bmr['tdee']
+	
+	#@adj_tdee = @tdee + user_vital.goal_type.calorie_adj.to_f
+
+	# Determine if the user is above or below the weight they started at
+	if @current_weight > @user_vital.start_weight
+		weight_class = 'red-bar'
+	else
+		weight_class = 'green-bar'
+	end
+	
+%>
+
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="box-container clearfix">
+				<div class="box <%= weight_class %>">
+					<p id="current_weight" class="title"><%= @current_weight %> <span> lbs.</span></p>
+					<p class="desc">Your Current Weight</p>
+				</div>
+				<div class="box red-bar">
+					<p id="bmi" class="title"><%= @bmi %> <span>&nbsp;</span></p>
+					<p class="desc">Your BMI</p>
+				</div>
+				<div class="box purple-bar">
+					<p id="bmr" class="title"><%= @bmr %> <span>k/Cal</span></p>
+					<p class="desc">Your Resting BMR</p>
+				</div>
+				<div class="box blue-bar">
+					<p id="tdee" class="title"><%= @tdee %> <span>k/Cal</span></p>
+					<p class="desc">Daily Calorie Budget</p>
+				</div>
+			</div>
+		</div>
+	</div>
+			

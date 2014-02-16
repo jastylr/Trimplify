@@ -1,1 +1,7 @@
-$('#current_weight').text(<%= @weight_stat.weight %>);
+//$('#current_weight').text(<%#= @weight_stat.weight %>);
+ $('#user-vitals').html("<%= escape_javascript( render '/users/user_vitals' )%>");
+ $('#weight-input-form .notice').html("<%= escape_javascript(flash[:notice]) %>").show('slow').fadeOut(5000)
+
+ $('#user-weight-chart').html("<%= escape_javascript( render '/users/weight_chart' )%>");
+
+ $('#goal-date').html("<%= escape_javascript( render '/users/completion_date' )%>");

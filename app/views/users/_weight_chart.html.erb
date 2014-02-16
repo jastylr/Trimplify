@@ -1,0 +1,25 @@
+<%
+	@target_weight = current_user.user_vital.target_weight
+	@weights = current_user.weight_stats.select("weight_stats.created_at, weight_stats.weight")
+	if !@weights.empty?
+		@weight = @weights.map { |date| [date.created_at.to_i * 1000, date.weight.to_f] }
+		@current_weight = @weights.last.weight
+	else
+		@weight = [Date.today.to_time.to_i * 1000, @start_weight]
+	end
+	
+
+	@chart = LazyHighCharts::HighChart.new('graph') do |f|
+		f.type = 'area'
+	  f.title({ :text=>"Weight Chart for " + current_user.first_name + ' ' + current_user.last_name})
+	  f.options[:xAxis] = { :type => 'datetime', :tickInterval => 24*3600*1000, :dateTimeLabelFormats => { :day => '%b %e, %Y' }, :lineWidth => 1} 
+	  f.yAxis [
+    	{:title => {:text => "Weight", :style => {:color => "#000000"}}, :min => @target_weight - 10, :tickInterval => 1, :plotBands => [{:color => 'green', :from => @target_weight, :to => @target_weight - 1, :label => {'text' => 'Target Weight', :style =>{'color' => '#fff', 'marginTop' => '-10px'}}, :zIndex => 10}]}
+  	]
+
+	  f.options[:plotOptions] = {area: {dataLabels: {enabled: true, :style => {:font_weight => 'bold'}}, pointInterval: 1.day, pointStart: 10.days.ago}}
+	  f.series(:type => 'area', :name=> 'Weight', :data=> @weight)
+
+	end
+%>			
+<%= high_chart("user-weight-chart", @chart) %>

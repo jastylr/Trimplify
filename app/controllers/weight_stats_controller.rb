@@ -14,15 +14,17 @@ class WeightStatsController < ApplicationController
 			
 			respond_to do |format|
 				if @weight_stat.save
-	      	format.html { redirect_to user_path, notice: "Today's weight was successfuly recorded" }
+					flash.now[:notice] = "Today's weight was successfuly recorded"
+	      	format.html { redirect_to user_path, notice: "Today's weight was successfuly recorded!" }
 	      	format.js
 	      end
 	    end
     else
     	# Record exists so update the weight instead
     	respond_to do |format|
-	    	if @weight_stat.update(weight_stat_params)
-    			format.html { redirect_to user_path(current_user.id), notice: "Today's weight was successfuly updated" }
+    		if @weight_stat.update(weight_stat_params)
+	    		flash.now[:notice] = "Today's weight was successfuly updated"
+    			format.html { redirect_to user_path(current_user.id), notice: "Today's weight was successfuly updated!" }
 	      	format.js
 	    	end
 	    end

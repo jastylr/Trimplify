@@ -4,21 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Trimplify" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Trimplify" %>">
-    <%= favicon_link_tag(source='favicon.ico') %>
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main" class="main">
+    <main role="main">
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
-    <footer>
-      <p>Copyright &copy; 2014 Trimplify. All rights reserved. Site design by: <a href="http://www.faultlinemedia.com" target="_blank">Faultline Media Solutions</a></p>
-    </footer>
   </body>
 </html>

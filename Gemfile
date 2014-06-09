@@ -28,6 +28,8 @@ gem 'simple_form'
 
 gem 'lazy_high_charts'
 
+gem 'sprockets_better_errors'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

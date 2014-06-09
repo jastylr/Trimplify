@@ -30,6 +30,8 @@ production:
   database: trimplify_prod_db
   pool: 5
   timeout: 500
+  username: dbuser
+  password: L1lman@139
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

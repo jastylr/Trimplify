@@ -1,6 +1,7 @@
 <%
 	@target_weight = current_user.user_vital.target_weight
-	@weights = current_user.weight_stats.select("weight_stats.created_at, weight_stats.weight")
+	# @weights = current_user.weight_stats.select("weight_stats.created_at, weight_stats.weight")
+	@weights = current_user.weight_stats.where('created_at > ?', 30.days.ago)
 	if !@weights.empty?
 		@weight = @weights.map { |date| [date.created_at.to_i * 1000, date.weight.to_f] }
 		@current_weight = @weights.last.weight

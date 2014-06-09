@@ -35,18 +35,19 @@ end
 
 gem 'bootstrap-sass'
 
+gem 'pg'
+
 # group :assets do
 # 	gem 'smooth-scroll-rails'
 # end
 
 group :production do
 	gem 'rails_12factor'
-	gem 'pg'
 end
 
 group :development do
 	# Use sqlite3 as the database for Active Record
-	gem 'sqlite3'
+	# gem 'sqlite3'
 	gem 'hirb'
   gem 'rails_layout'
   gem 'rails-footnotes', '>= 3.7.9'

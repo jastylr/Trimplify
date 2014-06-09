@@ -21,5 +21,7 @@ module Trimplify
     # config.i18n.default_locale = :de
     I18n.enforce_available_locales = true
     config.assets.initialize_on_precompile = false
+
+    config.assets.version = '1.1'
   end
 end

@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140205062932) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "activities", force: true do |t|
     t.string   "description"
     t.decimal  "mets",        precision: 3, scale: 1
@@ -28,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140205062932) do
     t.datetime "updated_at"
   end
 
-  add_index "exercise_stats", ["user_id"], name: "index_exercise_stats_on_user_id"
+  add_index "exercise_stats", ["user_id"], name: "index_exercise_stats_on_user_id", using: :btree
 
   create_table "food_stats", force: true do |t|
     t.string   "name"
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 20140205062932) do
     t.datetime "updated_at"
   end
 
-  add_index "food_stats", ["user_id"], name: "index_food_stats_on_user_id"
+  add_index "food_stats", ["user_id"], name: "index_food_stats_on_user_id", using: :btree
 
   create_table "goal_types", force: true do |t|
     t.string   "goal"
@@ -71,9 +74,9 @@ ActiveRecord::Schema.define(version: 20140205062932) do
     t.integer  "age"
   end
 
-  add_index "user_vitals", ["goal_type_id"], name: "index_user_vitals_on_goal_type_id"
-  add_index "user_vitals", ["tdee_factor_id"], name: "index_user_vitals_on_tdee_factor_id"
-  add_index "user_vitals", ["user_id"], name: "index_user_vitals_on_user_id"
+  add_index "user_vitals", ["goal_type_id"], name: "index_user_vitals_on_goal_type_id", using: :btree
+  add_index "user_vitals", ["tdee_factor_id"], name: "index_user_vitals_on_tdee_factor_id", using: :btree
+  add_index "user_vitals", ["user_id"], name: "index_user_vitals_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "first_name",      limit: 60
@@ -92,6 +95,6 @@ ActiveRecord::Schema.define(version: 20140205062932) do
     t.datetime "updated_at"
   end
 
-  add_index "weight_stats", ["user_id"], name: "index_weight_stats_on_user_id"
+  add_index "weight_stats", ["user_id"], name: "index_weight_stats_on_user_id", using: :btree
 
 end

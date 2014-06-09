@@ -1,6 +1,6 @@
 Trimplify::Application.routes.draw do
   
-  root :to => 'welcome#index'
+  root 'welcome#index'
   post "/" => "users#create", as: :users
   get "login" => "sessions#new"
   post "sessions/create"

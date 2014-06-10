@@ -39,6 +39,15 @@ class UsersController < ApplicationController
 			@multiplier = @user_vital.tdee_factor.multiplier.to_f
 			@goal = @user_vital.goal_type.goal
 
+      # @weights = current_user.weight_stats.select("weight_stats.created_at, weight_stats.weight")
+      @weights = current_user.weight_stats.where('created_at > ? AND created_at < ?', Time.zone.now.beginning_of_month, Time.zone.now.end_of_month)
+      if !@weights.empty?
+        @weight = @weights.map { |date| [date.created_at.to_i * 1000, date.weight.to_f] }
+        @current_weight = @weights.last.weight
+      else
+        @weight = [Date.today.to_time.to_i * 1000, @start_weight]
+      end
+
 		else
 			# The user has not entered his/her vitals yet so redirect them to do so
 			redirect_to new_user_vital_path, flash: {errors: ["In order to view your weight profile, you must enter your user vitals information below."]}

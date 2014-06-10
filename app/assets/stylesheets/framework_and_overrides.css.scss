@@ -314,12 +314,11 @@ input[id="weight_stat_weight"] {
 
 .profile-header {
   border-bottom: 2px solid #000;
-  background: image-url("profile-hdr-bkg-2.png") repeat-x 0 0;
+  background: image-url("profile-hdr-bkg-2.png") repeat-x 0 100%;
   padding:10px;
 }
 
 .profile-pic {
-  float:left;
   margin-right: 10px;
   width:175px;
   height:165px;

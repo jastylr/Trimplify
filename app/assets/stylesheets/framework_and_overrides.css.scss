@@ -147,13 +147,7 @@ section {
 }
 
 .tagline {
-  bottom: -35px;
-  left:3px;
-  color: #FFFFFF;
-  font-size: 12px;
-  font-weight: 500;
-  position: absolute;
-  text-transform: uppercase;
+  visibility:hidden;
 }
 
 .navbar-nav > li > a.login {
@@ -329,7 +323,6 @@ input[id="weight_stat_weight"] {
 .profile-table {
   display: table;
   table-layout: fixed;
-  width: 400px;
 }
 
 .profile-table .edit-vitals {
@@ -342,14 +335,15 @@ input[id="weight_stat_weight"] {
 
 .profile-cell {
   display: table-cell;
-  font-size: 14px;
-  line-height:20px;
+  font-size: 12px;
+  line-height:18px;
 }
 
 .complete-date {
   background: none repeat scroll 0 0 #EEEEEE;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin:20px 0;
   padding: 10px;
   text-align: center;
@@ -357,7 +351,7 @@ input[id="weight_stat_weight"] {
 
 .complete-date .date {
   color: #64B621;
-  font-size: 36px;
+  font-size: 28px;
   padding-top: 10px;
 }
 
@@ -513,8 +507,15 @@ MIXINS
   text-shadow:none;
 }
 
+.profile-cell {
+  display: table-cell;
+  font-size: 12px;
+  line-height:18px;
+}
+
 #weight-input-form {
   margin-right:10px;
+  margin-top: 15px;
 }
 
 #weight-input-form form {
@@ -543,6 +544,16 @@ MIXINS
 
 // Set style based on viewport size
 @media(min-width: 768px) {
+  .tagline {
+    bottom: -35px;
+    left:3px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    text-transform: uppercase;
+    visibility:visible;
+  }
   .navbar .greeting {
     color: #FFFFFF;
     margin: 6px 10px 0 0;
@@ -587,36 +598,57 @@ MIXINS
     padding: 20px 25px;
   }
 
+  .profile-cell {
+    display: table-cell;
+    font-size: 14px;
+    line-height:20px;
+  }
+
   .box {
-  margin: 10px 5px 0 0;
-  width:150px;
-  height:70px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  @include border-radius(8px);
-}
+    margin: 10px 5px 0 0;
+    width:150px;
+    height:70px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    @include border-radius(8px);
+  }
 
-.box p.title {
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: -2px;
-  line-height: 0.5em;
-  margin: 20px 0 3px;
-}
+  .box p.title {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 0.5em;
+    margin: 20px 0 3px;
+  }
 
-.box p.title span {
-  font-size: 14px;
-  font-weight:normal;
-  letter-spacing:0;
-}
+  .box p.title span {
+    font-size: 14px;
+    font-weight:normal;
+    letter-spacing:0;
+  }
 
-.box p.desc {
-  color:#474646;
-  font-size: 12px;
-  font-weight:normal;
-  line-height:18px;
-  margin:0;
-  text-shadow:none;
-}
+  .box p.desc {
+    color:#474646;
+    font-size: 12px;
+    font-weight:normal;
+    line-height:18px;
+    margin:0;
+    text-shadow:none;
+  }
+
+  .complete-date {
+    background: none repeat scroll 0 0 #EEEEEE;
+    font-size: 18px;
+    font-weight: 700;
+    margin:20px 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .complete-date .date {
+    color: #64B621;
+    font-size: 36px;
+    padding-top: 10px;
+  }
 }
 
 @media(min-width: 992px) {

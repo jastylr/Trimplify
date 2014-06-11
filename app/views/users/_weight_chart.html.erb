@@ -19,7 +19,7 @@
   	]
 
 	  f.options[:plotOptions] = {area: {dataLabels: {enabled: true, :style => {:font_weight => 'bold'}}, pointInterval: 1.day}}
-	  f.series(:type => 'area', :name=> 'Weight', :data=> @weight)
+	  f.series(:type => 'line', :name=> 'Weight', :data=> @weight)
 
 	end
 %>			

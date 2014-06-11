@@ -8,14 +8,14 @@
 	<div class="row">
 		<div class="profile-header clearfix">
 			<h3><%= current_user.first_name %> <%= current_user.last_name %>'s Profile</h3>
-			<div class="col-sm-2">
+			<div class="col-md-2">
 				<div class="profile">
 					<div class="profile-pic img-responsive">
 						<%= image_tag(@profile_pic.nil? ? (@gender == 'M' ? "profiles/user-default.jpg" : "profiles/user-default-fem.jpg") : @profile_pic, :alt => '') %>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-md-6">
 				<div class="profile-table">
 					<div class="profile-row">
 						<div class="profile-cell strong">Gender</div>
@@ -52,12 +52,13 @@
 		</div>
 	</div>
 
-	<div id="user-vitals">
-		<%= render 'user_vitals' %>
-	</div>
-
 	<div class="row">
-		<div class="col-sm-8">
+		<div class="col-md-8">
+			<div id="user-vitals">
+				<%= render 'user_vitals' %>
+			</div>
+		</div>
+		<div class="col-md-4">
 			<div id="weight-input-form" class="clearfix">
 				<%= render 'weight_input_form' %>
 				<span class="notice"></span>
@@ -67,7 +68,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-sm-8">
+		<div class="col-md-12">
 			<div id="goal-date" class="complete-date">
 				<%= render 'completion_date' %>
 			</diV>
@@ -75,7 +76,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-sm-12">
+		<div class="col-md-12">
 			<h4>Today's Calories at a Glance</h4>
 			<div class="box-container clearfix">
 				<div class="bar green-bar">consumed: 1850</div>
@@ -85,7 +86,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-sm-10">
+		<div class="col-md-12">
 			<div id="user-weight-chart" class="clearfix">
 				<%= render partial: 'weight_chart', locals: { weight: @weight, target_weight: @target_weight} %>
 			</div>			

@@ -1,5 +1,5 @@
 //= depend_on_asset "home-section.jpg"
-//= depend_on_asset "profile-hdr-bkg-2.png"
+//= depend_on_asset "profile-hdr-bkg.png"
 
 // import the CSS framework
 @import "bootstrap";
@@ -94,7 +94,7 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #fff;
+  background-color: #3f3F3f;
   padding-bottom: 40px;
   width: 100%;
   margin-top: 0; // accommodate the navbar
@@ -309,12 +309,14 @@ footer {
 input[id="user_vital_start_weight"],
 input[id="user_vital_target_weight"],
 input[id="weight_stat_weight"] {
-  width:68px;
+  float:left;
+  margin-right:10px;
+  width:68px !important;
 }
 
 .profile-header {
   border-bottom: 2px solid #000;
-  background: image-url("profile-hdr-bkg-2.png") repeat-x 0 100%;
+  background: #fff image-url("profile-hdr-bkg.png") repeat-x 0 0;
   padding:10px;
 }
 
@@ -480,22 +482,20 @@ MIXINS
   @include border-radius(0 8px 8px 0);*/
 }
 
-
-
 .box {
   margin: 10px 5px 0 0;
-  width:150px;
-  height:70px;
+  width:145px;
+  height:60px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   @include border-radius(8px);
 }
 
 .box p.title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   letter-spacing: -2px;
   line-height: 0.5em;
-  margin: 20px 0 3px;
+  margin: 18px 0 3px;
 }
 
 .box p.title span {
@@ -518,6 +518,7 @@ MIXINS
 }
 
 #weight-input-form form {
+  color:#fff;
   display:inline-block;
   width: 320px;
 }
@@ -531,9 +532,14 @@ MIXINS
   padding:8px;
 }
 
-.weight-input-date span {
-  font-weight:700;
+.weight-input-date {
+  color:#fff;
+    span {
+      font-weight:700;
+      font-style: italic;
+    }
 }
+
 
 // Set style based on viewport size
 @media(min-width: 768px) {
@@ -580,6 +586,37 @@ MIXINS
     margin-top: 40px;
     padding: 20px 25px;
   }
+
+  .box {
+  margin: 10px 5px 0 0;
+  width:150px;
+  height:70px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  @include border-radius(8px);
+}
+
+.box p.title {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 0.5em;
+  margin: 20px 0 3px;
+}
+
+.box p.title span {
+  font-size: 14px;
+  font-weight:normal;
+  letter-spacing:0;
+}
+
+.box p.desc {
+  color:#474646;
+  font-size: 12px;
+  font-weight:normal;
+  line-height:18px;
+  margin:0;
+  text-shadow:none;
+}
 }
 
 @media(min-width: 992px) {

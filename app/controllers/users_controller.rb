@@ -15,6 +15,19 @@ class UsersController < ApplicationController
   	end
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+    @user = current_user
+    if @user.update_attributes(user_params)
+      redirect_to user_path(current_user.id)
+    else
+      redirect_to :back, flash: {errors: [@user.errors.full_messages]}
+    end
+  end
+
   def show
   	# if (current_user.id != params[:id])
   	# 	redirect_to login_path, flash: {errors: ["You don't have access to view this user profile."]}

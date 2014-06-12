@@ -16,38 +16,46 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="profile-table">
-					<div class="profile-row">
-						<div class="profile-cell strong">Gender</div>
-						<div class="profile-cell"><%=(@gender == 'M' ? 'Male' : 'Female') %></div>
-					</div>
-					<div class="profile-row">
-						<div class="profile-cell strong">Age </div>
-						<div class="profile-cell"><%=@age %></div>
-					</div>
-					<div class="profile-row">
-						<div class="profile-cell strong">My Goal is to </div>
-						<div class="profile-cell"><%=@goal %></div>
-					</div>
-					<div class="profile-row">
-						<div class="profile-cell strong">My Starting Weight is</div>
-						<div class="profile-cell"><%=@start_weight %> lbs.</div>
-					</div>
-					<div class="profile-row">
-						<div class="profile-cell strong">My Target Weight is</div>
-						<div class="profile-cell"><%=@target_weight %> lbs.</div>
-					</div>
-					<div class="profile-row">
-						<div class="profile-cell strong">My Activity Level is</div>
-						<div class="profile-cell"><%=@activity_level %></div>
-					</div>
-					
-					<div>
-						<%= link_to edit_user_vital_path, :class => 'edit-vitals btn btn-primary btn-sm' do %>
-					    <%= content_tag(:span, "" ,:class=>' glyphicon glyphicon-pencil') %> Edit Vitals
-					  <% end %>
-					</div>
+				<div class="table-responsive">
+					<table class="table table-condensed">
+						<tr>
+							<td class="strong">Gender</td>
+							<td><%=(@gender == 'M' ? 'Male' : 'Female') %></td>
+						</tr>
+						<tr>
+							<td class="strong">Age</td>
+							<td><%=@age %></td>
+						</tr>
+						<tr>
+							<td class="strong">My Goal is to</td>
+							<td><%=@goal %></td>
+						</tr>
+						<tr>
+							<td class="strong">My Starting Weight is</td>
+							<td><%=@gstart_weight %></td>
+						</tr>
+						<tr>
+							<td class="strong">My Target Weight is</td>
+							<td><%=@target_weight %></td>
+						</tr>
+						<tr>
+							<td class="strong">My Activity Level is</td>
+							<td><%=@activity_level %></td>
+						</tr>
+					</table>
 				</div>
+				
+					
+				<div>
+					<%= link_to edit_user_vital_path, :class => 'edit-vitals btn btn-primary btn-sm' do %>
+				    <%= content_tag(:span, "" ,:class=>' glyphicon glyphicon-pencil') %> Edit Vitals
+				  <% end %>
+
+				  <%= link_to edit_user_path, :class => 'edit-vitals btn btn-success btn-sm' do %>
+				  	<%= content_tag(:span, "" ,:class=>' glyphicon glyphicon-pencil') %> Edit Profile
+				  <% end %>
+				</div>
+				
 			</div>
 		</div>
 	</div>

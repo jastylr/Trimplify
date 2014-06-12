@@ -13,7 +13,14 @@
 	@chart = LazyHighCharts::HighChart.new('graph') do |f|
 		f.type = 'area'
 	  f.title({ :text=>"Weight Chart for " + current_user.first_name + ' ' + current_user.last_name})
-	  f.options[:xAxis] = { :type => 'datetime', :tickInterval => 24*3600*1000, :dateTimeLabelFormats => { :day => '%b %e, %Y' }, :lineWidth => 1} 
+	  f.options[:xAxis] = { 
+	  	:type => 'datetime', 
+	  	:tickPixelInterval => 24*3600*1000, 
+	  	:dateTimeLabelFormats => { 
+	  		:day => '%b %e, %Y' 
+  		}, 
+  		:lineWidth => 1
+  	} 
 	  f.yAxis [
     	{:title => {:text => "Weight", :style => {:color => "#000000"}}, :min => @target_weight - 10, :tickInterval => 1, :plotBands => [{:color => 'green', :from => @target_weight, :to => @target_weight - 1, :label => {'text' => 'Target Weight', :style =>{'color' => '#fff', 'marginTop' => '-10px'}}, :zIndex => 10}]}
   	]

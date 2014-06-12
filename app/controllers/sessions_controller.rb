@@ -13,6 +13,10 @@ class SessionsController < ApplicationController
   	end
   end
 
+  def edit
+    @user = User.find_by(email: current_user.email).try(:authenticate, current_user.password)
+  end
+
   def destroy
   	sign_out
   	redirect_to root_path
